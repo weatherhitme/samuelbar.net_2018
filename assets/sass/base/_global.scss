@@ -1,0 +1,114 @@
+@font-face {
+  font-family: 'Nexa';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Nexa Light'),
+    url('../fonts/nexa-light-webfont.woff2') format('woff2'),
+    url('../fonts/nexa-light-webfont.woff') format('woff'),
+    url('../fonts/nexa-light-webfont.ttf') format('truetype'),
+    url('../fonts/nexa-light-webfont.eot') format('embedded-opentype')
+}
+
+@font-face {
+  font-family: 'Nexa';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Nexa Regular'),
+    url('../fonts/nexa-regular-webfont.woff2') format('woff2'),
+    url('../fonts/nexa-regular-webfont.woff') format('woff'),
+    url('../fonts/nexa-regular-webfont.ttf') format('truetype'),
+    url('../fonts/nexa-regular-webfont.eot') format('embedded-opentype')
+}
+
+@font-face {
+  font-family: 'Nexa';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Nexa Heavy'),
+    url('../fonts/nexa-heavy-webfont.woff2') format('woff2'),
+    url('../fonts/nexa-heavy-webfont.woff') format('woff'),
+    url('../fonts/nexa-heavy-webfont.ttf') format('truetype'),
+    url('../fonts/nexa-heavy-webfont.eot') format('embedded-opentype')
+}
+
+@font-face {
+  font-family: 'Nexa';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Nexa Black'),
+    url('../fonts/nexa-black-webfont.woff2') format('woff2'),
+    url('../fonts/nexa-black-webfont.woff') format('woff'),
+    url('../fonts/nexa-black-webfont.ttf') format('truetype'),
+    url('../fonts/nexa-black-webfont.eot') format('embedded-opentype')
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+
+body {
+  font-family: 'Nexa', sans-serif;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #333;
+}
+
+p {
+  font-weight: 400;
+  margin-bottom: 1.3em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 1.414em 0 0.5em;
+  font-family: 'Nexa';
+  line-height: 1.2;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.998rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2.827rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.999rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.414rem;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+small,
+.font_small {
+  font-size: 0.707rem;
+}
