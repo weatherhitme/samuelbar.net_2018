@@ -1,0 +1,169 @@
+// Aspect ratios are created in a hacky way, where a percentage given to "padding-top" is actually a percentage of the element's width.
+// Therefore, using these aspect-ratio classes will change the element's height to a percentage of its width via padding-top.
+// IE. only heights will change, widths will behave as normal
+//
+// To apply these aspect ratios to an image, give it a containing div in the following format:
+//
+//  <div class="aspect-ratio aspect-x-y">
+//    <img />
+//  </div>
+
+
+// You can also apply aspect ratios to specific bootstrap breakpoints, for example:
+//
+//  <div class="aspect-ratio aspect-sm-3-1 aspect-lg-2-1 aspect-xl-1-1">
+//    <img />
+//  </div>
+
+// Below defines the aspect ratios you can use.
+
+$aspect-ratios: ('1-2': (width: 1,
+height: 2,
+),
+'9-16': (width: 9,
+height: 16,
+),
+'2-3': (width: 2,
+height: 3,
+),
+'3-4': (width: 3,
+height: 4,
+),
+'1-1': (width: 1,
+height: 1,
+),
+'4-3': (width: 4,
+height: 3,
+),
+'3-2': (width: 3,
+height: 2,
+),
+'16-9': (width: 16,
+height: 9,
+),
+'2-1': (width: 2,
+height: 1,
+),
+'3-1': (width: 3,
+height: 1,
+));
+
+
+// Set pixel height to extend aspect-ratio. Due to the hacky "padding-top: XX%" method of setting aspect-ratios, heights are variable, and setting a height breaks the ratio.
+// The below allows you to set a height by calculating it based on what the width should be at that aspect ratio.
+
+// Format becomes: "aspect-ratio aspect-x-y-height"
+//
+//  <div class="aspect-ratio aspect-3-1-100 aspect-md-16-9-120">
+//    <img />
+//  </div>
+//
+// Add your required heights (in pixels) below for them to be compiled as class names.
+
+$heights: (100, 120);
+
+.aspect-ratio {
+  position: relative;
+  overflow: hidden;
+
+  @each $aspect,
+  $val in $aspect-ratios {
+    &.aspect-#{$aspect} {
+      padding-top: calc(100% / (#{map-get($val, width)} / #{map-get($val, height)}));
+
+      @each $height in $heights {
+        &-#{$height} {
+          padding-top: 0;
+          height: #{$height}px;
+          width: calc(#{$height}px * (#{map-get($val, width)} / #{map-get($val, height)}));
+        }
+      }
+    }
+  }
+
+  @each $aspect,
+  $val in $aspect-ratios {
+
+    @each $br,
+    $px in $grid-breakpoints {
+      @include media-breakpoint-up($br) {
+        &.aspect-#{$br}-#{$aspect} {
+          padding-top: calc(100% / (#{map-get($val, width)} / #{map-get($val, height)}));
+
+          @each $height in $heights {
+            &-#{$height} {
+              padding-top: 0;
+              height: #{$height}px;
+              width: calc(#{$height}px * (#{map-get($val, width)} / #{map-get($val, height)}));
+            }
+          }
+        }
+      }
+    }
+  }
+
+  >img,
+  >div {
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    min-height: 100%;
+    width: 100%;
+    transform: translateY(-50%);
+    object-fit: cover;
+  }
+}
+
+@mixin aspect-ratio($x, $y, $br:null, $height:null) {
+
+  @if $br==null and $height==null {
+    position: relative;
+    overflow: hidden;
+
+    padding-top: calc(100% / (#{$x} / #{$y}));
+  }
+
+  @else if $br and $height==null {
+    @include media-breakpoint-up($br) {
+      position: relative;
+      overflow: hidden;
+
+      padding-top: calc(100% / (#{$x} / #{$y}));
+    }
+  }
+
+  @else if $br and $height {
+    @include media-breakpoint-up($br) {
+      position: relative;
+      overflow: hidden;
+
+      height: #{$height}px;
+      width: calc(#{$height}px * (#{$x} / #{$y}));
+    }
+  }
+
+  @else if $br==null and $height {
+    position: relative;
+    overflow: hidden;
+    
+    height: #{$height}px;
+    width: calc(#{$height}px * (#{$x} / #{$y}));
+  }
+
+  >img,
+  >div {
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    min-height: 100%;
+    width: 100%;
+    transform: translateY(-50%);
+    object-fit: cover;
+  }
+}
