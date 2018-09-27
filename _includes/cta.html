@@ -1,0 +1,11 @@
+<section class='cta-container-top container-fluid'>
+  <div class='cta'>
+    <div class='container'>
+      {% for cta in page.cta-heroes %}
+      <span class='cta-hero'>"{{ cta }}"
+        <span class='cta-hero-shadow'>"{{ cta }}"</span>
+      </span>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,27 @@
+.cta {
+    background-color: $color-blue;
+    margin: 16px;
+    border-radius: 20px;
+    @include box-shadow-inset;
+    min-height: 300px;
+    color: #fff;
+    text-align: center;
+
+    .cta-hero {
+        display: block;
+        font-weight: 700;
+        text-transform: uppercase;
+        position: relative;
+        font-size: $h2-size;
+        line-height: 1.2;
+        user-select: none;
+    }
+
+    .cta-hero-shadow {
+        position: absolute;
+        top: 0.1em;
+        right: 0.1em;
+        width: 100%;
+        opacity: 0.5;
+    }
+}

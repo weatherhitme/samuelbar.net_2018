@@ -1,6 +1,6 @@
 header.navbar {
   height: 120px;
-  @include box-shadow;
+  @include box-shadow-far;
 
   .logo {
     mix-blend-mode: multiply;
