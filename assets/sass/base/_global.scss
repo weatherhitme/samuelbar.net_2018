@@ -53,6 +53,10 @@ html {
   box-sizing: inherit;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 
 body {
   font-family: 'Nexa', sans-serif;
@@ -64,6 +68,14 @@ body {
 p {
   font-weight: 400;
   margin-bottom: 1.3em;
+
+  &:last-child {
+      margin-bottom: 0;
+  }
+}
+
+strong {
+    font-weight: 600;
 }
 
 h1,
@@ -75,40 +87,54 @@ h6 {
   margin: 1.414em 0 0.5em;
   font-family: 'Nexa';
   line-height: 1.2;
+
+  &:first-child {
+      margin-top: 0;
+  }
+
+  &:only-child {
+      margin: 0;
+  }
 }
 
 h1 {
   margin-top: 0;
-  font-size: $h1-size;
+  @include h1-size;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 h2 {
-  font-size: $h2-size;
+  @include h2-size;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 h3 {
-  font-size: $h3-size;
+  @include h3-size;
   font-weight: 600;
 }
 
 h4 {
-  font-size: $h4-size;
+  @include h4-size;
   font-weight: 600;
 }
 
 h5 {
-  font-size: $h5-size;
+  @include h5-size;
   font-weight: 600;
 }
 
 h6 {
-  font-size: $h6-size;
+  @include h6-size;
   font-weight: 300;
 }
 
 small,
 .font_small {
   font-size: 0.707rem;
+}
+
+.content section {
+    margin-top: 1em;
 }

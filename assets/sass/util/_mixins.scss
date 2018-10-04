@@ -1,15 +1,77 @@
 @mixin box-shadow {
-  box-shadow: 0 0 25px rgba(#000000, 0.25);
+    box-shadow: 0 0 25px rgba(#000000, 0.25);
+}
+
+@mixin box-shadow-faint {
+    box-shadow: 0 0 25px rgba(#000000, 0.15);
+}
+
+@mixin box-shadow-close {
+    box-shadow: 0 0 15px rgba(#000000, 0.2);
 }
 
 @mixin box-shadow-far {
-  box-shadow: 0 0 40px rgba(#000000, 0.25);
+    box-shadow: 0 0 40px rgba(#000000, 0.25);
+}
+
+@mixin box-shadow-far-faint {
+    box-shadow: 0 0 40px rgba(#000000, 0.1);
 }
 
 @mixin box-shadow-inset {
-  box-shadow: inset 0 0 25px rgba(#000000, 0.25);
+    box-shadow: inset 0 0 25px rgba(#000000, 0.25);
 }
 
 @mixin box-shadow-far-inset {
-  box-shadow: inset 0 0 40px rgba(#000000, 0.25);
+    box-shadow: inset 0 0 40px rgba(#000000, 0.25);
+}
+
+@mixin responsive-headings($br, $size, $scale) {
+
+    @include media-breakpoint-down($br) {
+        font-size: calc(#{$size} * #{$scale});
+    }
+
+}
+
+@mixin h1-size {
+    $size: $h1-size;
+    font-size: $size;
+    @include responsive-headings(md, $size, 0.9);
+    @include responsive-headings(sm, $size, 0.8);
+}
+
+@mixin h2-size {
+    $size: $h2-size;
+    font-size: $size;
+    @include responsive-headings(md, $size, 0.9);
+    @include responsive-headings(sm, $size, 0.8);
+}
+
+@mixin h3-size {
+    $size: $h3-size;
+    font-size: $size;
+    @include responsive-headings(md, $size, 0.9);
+    @include responsive-headings(sm, $size, 0.8);
+}
+
+@mixin h4-size {
+    $size: $h4-size;
+    font-size: $size;
+    @include responsive-headings(md, $size, 0.9);
+    @include responsive-headings(sm, $size, 0.8);
+}
+
+@mixin h5-size {
+    $size: $h5-size;
+    font-size: $size;
+    @include responsive-headings(md, $size, 0.9);
+    @include responsive-headings(sm, $size, 0.8);
+}
+
+@mixin h6-size {
+    $size: $h6-size;
+    font-size: $size;
+    @include responsive-headings(md, $size, 0.9);
+    @include responsive-headings(sm, $size, 0.8);
 }

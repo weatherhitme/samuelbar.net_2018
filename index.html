@@ -1,33 +1,40 @@
 ---
 layout: default
-cta-heroes: [User Experience Developer, Brand Experience Consultant]
+cta-heroes: [User Experience<br>Developer, Graphic<br>Designer, Brand Experience<br>Consultant, Front-End Web<br>Developer,
+UI/UX<br>Designer, Cool Guy<br>Extraordinaire]
+cta-desc: 'I just love suckin tiddies and fuckin biddies, am I right you guys?!.'
 ---
 
+<section class="services-section">
+    <h3 class="text-center">What I do</h3>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta neque cum, libero laboriosam
+        voluptatem optio minus.
+    </p>
+    <div class="row">
 
-<h1 class="text-red">Hello world!</h1>
-<p class="text-red">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta neque cum, libero laboriosam
-  voluptatem optio minus, assumenda natus nihil possimus asperiores expedita. Recusandae, obcaecati perspiciatis! Ex
-  repellat perferendis sapiente iusto?
-  <div class="kitty">
-    <img src="http://placekitten.com/500/500">
-  </div></p>
-<h2 class="text-blue">Hello world!</h2>
-<p class="text-blue">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta neque cum, libero laboriosam
-  voluptatem optio minus, assumenda natus nihil possimus asperiores expedita. Recusandae, obcaecati perspiciatis! Ex
-  repellat perferendis sapiente iusto?</p>
-<h3 class="text-grey">Hello world!</h3>
-<p class="text-grey">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta neque cum, libero laboriosam
-  voluptatem optio minus, assumenda natus nihil possimus asperiores expedita. Recusandae, obcaecati perspiciatis! Ex
-  repellat perferendis sapiente iusto?</p>
-<h4>Hello world!</h4>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta neque cum, libero laboriosam voluptatem optio minus,
-  assumenda natus nihil possimus asperiores expedita. Recusandae, obcaecati perspiciatis! Ex repellat perferendis
-  sapiente iusto?</p>
-<h5>Hello world!</h5>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta neque cum, libero laboriosam voluptatem optio minus,
-  assumenda natus nihil possimus asperiores expedita. Recusandae, obcaecati perspiciatis! Ex repellat perferendis
-  sapiente iusto?</p>
-<h6>Hello world!</h6>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta neque cum, libero laboriosam voluptatem optio minus,
-  assumenda natus nihil possimus asperiores expedita. Recusandae, obcaecati perspiciatis! Ex repellat perferendis
-  sapiente iusto?</p>
+        {% for i in (1..4) %}
+
+        <div class="col-12 col-md-6 col-lg-3 service-container">
+            <div class="card service-card" tabindex='0'>
+                <div class="card-img">
+                    <img height="100"
+                    {% if i == 1 %}src="assets/images/services/ID.svg"{% endif %}
+                    {% if i == 2 %}src="assets/images/services/UX.svg"{% endif %}
+                    {% if i == 3 %}src="assets/images/services/WD.svg"{% endif %}
+                    {% if i == 4 %}src="assets/images/services/GD.svg"{% endif %}>
+                </div>
+                <div class="card-body">
+                    <span class="card-title">
+                            {% if i == 1 %}Brand Identity{% endif %}
+                            {% if i == 2 %}User Experience{% endif %}
+                            {% if i == 3 %}Web Development{% endif %}
+                            {% if i == 4 %}Graphic Design{% endif %}
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        {% endfor %}
+    </div>
+</section>
