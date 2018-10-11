@@ -1,77 +1,93 @@
 @font-face {
-  font-family: 'Nexa';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Nexa Light'),
-    url('../fonts/nexa-light-webfont.woff2') format('woff2'),
-    url('../fonts/nexa-light-webfont.woff') format('woff'),
-    url('../fonts/nexa-light-webfont.ttf') format('truetype'),
-    url('../fonts/nexa-light-webfont.eot') format('embedded-opentype')
+    font-family: 'Nexa';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Nexa Light'),
+        url('../fonts/nexa-light-webfont.woff2') format('woff2'),
+        url('../fonts/nexa-light-webfont.woff') format('woff'),
+        url('../fonts/nexa-light-webfont.ttf') format('truetype'),
+        url('../fonts/nexa-light-webfont.eot') format('embedded-opentype')
 }
 
 @font-face {
-  font-family: 'Nexa';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Nexa Regular'),
-    url('../fonts/nexa-regular-webfont.woff2') format('woff2'),
-    url('../fonts/nexa-regular-webfont.woff') format('woff'),
-    url('../fonts/nexa-regular-webfont.ttf') format('truetype'),
-    url('../fonts/nexa-regular-webfont.eot') format('embedded-opentype')
+    font-family: 'Nexa';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Nexa Regular'),
+        url('../fonts/nexa-regular-webfont.woff2') format('woff2'),
+        url('../fonts/nexa-regular-webfont.woff') format('woff'),
+        url('../fonts/nexa-regular-webfont.ttf') format('truetype'),
+        url('../fonts/nexa-regular-webfont.eot') format('embedded-opentype')
 }
 
 @font-face {
-  font-family: 'Nexa';
-  font-style: normal;
-  font-weight: 600;
-  src: local('Nexa Heavy'),
-    url('../fonts/nexa-heavy-webfont.woff2') format('woff2'),
-    url('../fonts/nexa-heavy-webfont.woff') format('woff'),
-    url('../fonts/nexa-heavy-webfont.ttf') format('truetype'),
-    url('../fonts/nexa-heavy-webfont.eot') format('embedded-opentype')
+    font-family: 'Nexa';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Nexa Heavy'),
+        url('../fonts/nexa-heavy-webfont.woff2') format('woff2'),
+        url('../fonts/nexa-heavy-webfont.woff') format('woff'),
+        url('../fonts/nexa-heavy-webfont.ttf') format('truetype'),
+        url('../fonts/nexa-heavy-webfont.eot') format('embedded-opentype')
 }
 
 @font-face {
-  font-family: 'Nexa';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Nexa Black'),
-    url('../fonts/nexa-black-webfont.woff2') format('woff2'),
-    url('../fonts/nexa-black-webfont.woff') format('woff'),
-    url('../fonts/nexa-black-webfont.ttf') format('truetype'),
-    url('../fonts/nexa-black-webfont.eot') format('embedded-opentype')
+    font-family: 'Nexa';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Nexa Black'),
+        url('../fonts/nexa-black-webfont.woff2') format('woff2'),
+        url('../fonts/nexa-black-webfont.woff') format('woff'),
+        url('../fonts/nexa-black-webfont.ttf') format('truetype'),
+        url('../fonts/nexa-black-webfont.eot') format('embedded-opentype')
 }
 
 html {
-  box-sizing: border-box;
-  font-size: 18px;
+    box-sizing: border-box;
+    font-size: 18px;
 }
 
 *,
 ::before,
 ::after {
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
 
-html, body {
-  overflow-x: hidden;
+html,
+body {
+    overflow-x: hidden;
 }
 
 
 body {
-  font-family: 'Nexa', sans-serif;
-  font-weight: 400;
-  line-height: 1.45;
-  color: $color-grey;
+    font-family: 'Nexa', sans-serif;
+    font-weight: 400;
+    line-height: 1.45;
+    color: $color-grey;
+
+    &.user-is-tabbing *:focus {
+        outline: solid 5px red;
+    }
+
+    &:not(.user-is-tabbing) {
+        .card,
+        button,
+        select {
+            &:focus {
+                outline: none;
+            }
+        }
+
+    }
 }
 
 p {
-  font-weight: 400;
-  margin-bottom: 1.3em;
+    font-weight: 400;
+    margin-bottom: 1.3em;
 
-  &:last-child {
-      margin-bottom: 0;
-  }
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 strong {
@@ -84,55 +100,55 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 1.414em 0 0.5em;
-  font-family: 'Nexa';
-  line-height: 1.2;
+    margin: 1.414em 0 0.5em;
+    font-family: 'Nexa';
+    line-height: 1.2;
 
-  &:first-child {
-      margin-top: 0;
-  }
+    &:first-child {
+        margin-top: 0;
+    }
 
-  &:only-child {
-      margin: 0;
-  }
+    &:only-child {
+        margin: 0;
+    }
 }
 
 h1 {
-  margin-top: 0;
-  @include h1-size;
-  font-weight: 700;
-  text-transform: uppercase;
+    margin-top: 0;
+    @include h1-size;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 h2 {
-  @include h2-size;
-  font-weight: 700;
-  text-transform: uppercase;
+    @include h2-size;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 h3 {
-  @include h3-size;
-  font-weight: 600;
+    @include h3-size;
+    font-weight: 600;
 }
 
 h4 {
-  @include h4-size;
-  font-weight: 600;
+    @include h4-size;
+    font-weight: 600;
 }
 
 h5 {
-  @include h5-size;
-  font-weight: 600;
+    @include h5-size;
+    font-weight: 600;
 }
 
 h6 {
-  @include h6-size;
-  font-weight: 300;
+    @include h6-size;
+    font-weight: 300;
 }
 
 small,
 .font_small {
-  font-size: 0.707rem;
+    font-size: 0.707rem;
 }
 
 .content section {

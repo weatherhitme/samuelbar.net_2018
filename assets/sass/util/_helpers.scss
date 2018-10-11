@@ -1,4 +1,37 @@
 
+// Bootstrap responsive container/row classes
+@each $br, $px in $grid-breakpoints {
+    @include media-breakpoint-up($br) {
+
+        .row-#{$br} {
+            @include make-row();
+        }
+
+        .container-#{$br} {
+            @include make-container();
+        }
+
+        .container-#{$br} {
+            @include make-container();
+        }
+    }
+
+    @include media-breakpoint-down($br) {
+
+        .row-#{$br}-down {
+            @include make-row();
+        }
+
+        .container-#{$br}-down {
+            @include make-container();
+        }
+
+        .container-#{$br}-down {
+            @include make-container();
+        }
+    }
+}
+
 .text-red {
     color: $color-red;
 }
@@ -27,4 +60,8 @@ h4 {
 
 .text-center {
     text-align: center;
+}
+
+.loading-hide {
+    visibility: hidden;
 }

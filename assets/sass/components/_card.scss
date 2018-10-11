@@ -2,6 +2,10 @@
     @include box-shadow-close;
     border-radius: 10px;
 
+    .card-img {
+        user-select: none;
+    }
+
     .card-body {
         padding: 15px 20px;
     }

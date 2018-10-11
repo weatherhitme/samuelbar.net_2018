@@ -1,5 +1,5 @@
-.cta {
-    background-color: $color-blue;
+.hero {
+    background-color: $color-grey;
     margin: 16px;
     border-radius: 16px;
     @include box-shadow-inset;
@@ -12,7 +12,14 @@
     justify-content: center;
     padding: 1.5em 0;
 
-    .cta-hero {
+    @include media-breakpoint-up(md) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .hero-text {
         display: block;
         font-weight: 700;
         text-transform: uppercase;
@@ -23,17 +30,17 @@
         margin-bottom: 0.5em;
 
         @include h3-size;
-        
+
         @include media-breakpoint-up(sm) {
             @include h2-size;
         }
 
         @include media-breakpoint-up(md) {
-            width: 80%;
+            margin: 0;
         }
     }
 
-    .cta-hero-shadow {
+    .hero-text-shadow {
         position: absolute;
         top: 0.1em;
         right: 0.1em;
@@ -42,20 +49,45 @@
     }
 
     .hero-container {
-        width: 100%;
-        display: flex !important;
-        justify-content: center;
-
-        .slick-track {
+        @include media-breakpoint-down(sm) {
+            width: calc(100% + 30px);
             display: flex !important;
-            align-items: center;
+            justify-content: center;
+            padding: 0;
+
+            .slick-track {
+                display: flex !important;
+                align-items: center;
+            }
+
+            .slick-slide {
+                .container {
+                    display: flex !important;
+                    justify-content: center;
+                }
+            }
         }
 
-        .slick-slide {
-            .container {
-                display: flex !important;
+        @include media-breakpoint-up(md) {
+            align-self: stretch;
+            align-items: center;
+            display: flex;
+
+            .slick-slide {
+                display: flex;
                 justify-content: center;
+                align-items: center;
+                height: 300px;
             }
+        }
+    }
+
+    .hero-desc {
+        @include media-breakpoint-up(md) {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
     }
 }

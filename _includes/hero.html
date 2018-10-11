@@ -1,0 +1,19 @@
+<section class='hero-container-top container-fluid'>
+    <div class='hero'>
+        <div class="container row">
+            <div class='hero-container row-sm-down col-md-6'>
+                {% for hero in page.hero-list %}
+                <div class='{% if forloop.index0 != 0 %} loading-hide {% endif %}'>
+                    <span class='hero-text'>"{{ hero }}"
+                        <span class='hero-text-shadow'>"{{ hero }}"</span>
+                    </span>
+                </div>
+                {% endfor %}
+            </div>
+            <div class='hero-desc container-sm-down col-md-6'>
+                <h4><strong>Whatever that means.</strong></h4>
+                <p> {{ page.hero-desc }}</p>
+            </div>
+        </div>
+    </div>
+</section>
