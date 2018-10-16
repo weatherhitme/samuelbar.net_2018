@@ -1,0 +1,29 @@
+.window.currently {
+
+    padding: 3em 0;
+
+    span {
+        @include h3-size;
+        font-weight: 700;
+
+        @include media-breakpoint-up(md) {
+            @include h2-size;
+        }
+    }
+
+    .currently-content {
+        margin-top: 1.5em;
+
+        p {
+            font-weight: 600;
+        }
+
+        .currently-cta {
+            display: flex;
+            font-size: 1.15em;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1em;
+        }
+    }
+}

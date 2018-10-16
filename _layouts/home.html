@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: page.lang | default: 'en' }}">
+
+{% include head.html %}
+
+<body>
+    {% include navigation.html %}
+
+    <main class="row" aria-label="Content">
+
+        {% include hero.html %}
+
+        <section class="content container">
+            <div class="content-inner container">
+                {{ content }}
+            </div>
+        </section>
+
+        {% include cta-home.html %}
+
+    </main>
+
+    {% include scripts.html %}
+
+</body>
+
+</html>

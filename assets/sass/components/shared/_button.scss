@@ -1,0 +1,102 @@
+.button {
+    display: inline-block;
+    line-height: 0.7;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: unset;
+    padding: 0.75em 0.75em 0.7em;
+    border-radius: 0.5em;
+    transition: 0.3s;
+
+    &:hover {
+        transform: scale(1.025) translateY(-5px);
+    }
+
+    &.solid {
+        &-blue {
+            @include box-shadow-close($color-blue);
+            background: $color-blue-safe;
+            border: 3px solid $color-blue-safe;
+            color: $color-blue-light;
+
+            &:hover {
+                @include box-shadow($color-blue);
+                background: $color-blue;
+                border: 3px solid $color-blue;
+                color: #fff;
+            }
+        }
+
+        &-red {
+            @include box-shadow-close($color-red);
+            background: $color-red-safe;
+            border: 3px solid $color-red-safe;
+            color: $color-red-light;
+
+            &:hover {
+                @include box-shadow($color-red);
+                background: $color-red;
+                border: 3px solid $color-red;
+                color: #fff;
+            }
+        }
+
+        &-white {
+            &-blue {
+                @include box-shadow-close($color-blue);
+                background: #fff;
+                border: 3px solid #fff;
+                color: $color-blue-safe;
+
+                &:hover {
+                    @include box-shadow($color-blue-safe);
+                    background: $color-blue;
+                    border: 3px solid $color-blue;
+                    color: #fff;
+                }
+            }
+            &-red {
+                @include box-shadow-close($color-red);
+                background: #fff;
+                border: 3px solid #fff;
+                color: $color-red-safe;
+
+                &:hover {
+                    @include box-shadow($color-red-safe);
+                    background: $color-red;
+                    border: 3px solid $color-red;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    &.border {
+        &-blue {
+            @include box-shadow-close($color-blue);
+            background: transparent;
+            border: 3px solid $color-blue-safe;
+            color: $color-blue-safe;
+
+            &:hover {
+                @include box-shadow($color-blue);
+                background: $color-blue-safe;
+                color: #fff;
+            }
+        }
+
+        &-red {
+            @include box-shadow-close($color-red);
+            background: transparent;
+            border: 3px solid $color-red-safe;
+            color: $color-red-safe;
+
+            &:hover {
+                @include box-shadow($color-red);
+                background: $color-red-safe;
+                color: #fff;
+            }
+        }
+    }
+
+}

@@ -1,6 +1,6 @@
-
 // Bootstrap responsive container/row classes
-@each $br, $px in $grid-breakpoints {
+@each $br,
+$px in $grid-breakpoints {
     @include media-breakpoint-up($br) {
 
         .row-#{$br} {
@@ -36,12 +36,64 @@
     color: $color-red;
 }
 
+.text-red-safe {
+    color: $color-red-safe;
+}
+
 .text-blue {
+    color: $color-blue;
+}
+
+.text-blue-safe {
     color: $color-blue-safe;
 }
 
 .text-grey {
     color: $color-grey;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.bg-red {
+    background-color: $color-red;
+
+    &-light {
+        background-color: $color-red-light
+    }
+}
+
+.bg-blue {
+    background-color: $color-blue;
+
+    &-light {
+        background-color: $color-blue-light
+    }
+}
+
+.bg-grey {
+    background-color: $color-grey;
+}
+
+.bg-white {
+    background-color: #fff;
+}
+
+.link-red {
+    @include link-color($color-red-safe, $color-red-light);
+
+    &:hover {
+        @include link-color($color-red, #fff);
+    }
+}
+
+.link-blue {
+    @include link-color($color-blue-safe, $color-blue-light);
+
+    &:hover {
+        @include link-color($color-blue, #fff);
+    }
 }
 
 h1,
@@ -52,14 +104,45 @@ h4 {
         &-red {
             color: $color-red;
         }
+
         &-blue {
             color: $color-blue;
         }
     }
 }
 
+.text-uppercase {
+    text-transform: uppercase;
+}
+
 .text-center {
     text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+@each $br,
+$px in $grid-breakpoints {
+
+    @include media-breakpoint-up($br) {
+        .text-#{$br}-center {
+            text-align: center;
+        }
+
+        .text-#{$br}-left {
+            text-align: left;
+        }
+
+        .text-#{$br}-right {
+            text-align: right;
+        }
+    }
 }
 
 .loading-hide {

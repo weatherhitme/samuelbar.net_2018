@@ -15,8 +15,11 @@
 @import 'util/aspect';
 @import 'util/mixins';
 @import 'util/helpers';
-@import 'components/hero';
-@import 'components/card';
+@import 'components/shared/hero';
+@import 'components/shared/card';
+@import 'components/shared/window';
+@import 'components/shared/button';
+@import 'components/currently';
 @import 'components/services';
 @import 'base/global';
 @import 'base/navigation';

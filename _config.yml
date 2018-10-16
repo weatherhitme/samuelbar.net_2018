@@ -25,6 +25,8 @@ sass:
   sass_dir: assets/sass
   style: :compressed
 
+include: ['_pages']
+
 # Build settings
 exclude:
   - package.json

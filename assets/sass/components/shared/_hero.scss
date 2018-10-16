@@ -1,22 +1,13 @@
 .hero {
     background-color: $color-grey;
-    margin: 16px;
-    border-radius: 16px;
-    @include box-shadow-inset;
     min-height: 300px;
     color: #fff;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1.5em 0;
 
     @include media-breakpoint-up(md) {
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        padding: 0;
     }
 
     .hero-text {
@@ -29,11 +20,11 @@
         overflow: hidden;
         margin-bottom: 0.5em;
 
-        @include h3-size;
+        font-size: $h2-size;
 
-        @include media-breakpoint-up(sm) {
-            @include h2-size;
-        }
+        @include responsive-headings(lg, $h2-size, 0.8);
+        @include responsive-headings(md, $h2-size, 0.75);
+        @include responsive-headings(sm, $h3-size, 0.8);
 
         @include media-breakpoint-up(md) {
             margin: 0;
@@ -90,30 +81,4 @@
             justify-content: center;
         }
     }
-}
-
-// Slick flicker fix
-.slick-slide,
-.slick-slider .slick-track,
-.slick-slider .slick-list {
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    -o-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-
-    -webkit-transform: translateZ(0);
-    -moz-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    -o-transform: translateZ(0);
-    transform: translateZ(0);
-
-    -webkit-perspective: 1000;
-    -moz-perspective: 1000;
-    -ms-perspective: 1000;
-    perspective: 1000;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    backface-visibility: hidden;
 }
