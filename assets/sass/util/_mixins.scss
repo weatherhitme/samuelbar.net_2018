@@ -80,12 +80,21 @@
 
 @mixin link-color($bg, $color) {
     background-color: $bg;
-    padding: 7px 7px 0;
     border-radius: 5px;
     color: $color;
+    box-sizing: content-box;
     transition: color 0.1s, background-color 0.1s;
+    height: 1em;
+    display: inline-flex;
+    align-items: center;
 
     border-bottom: none;
     text-decoration: none;
     position: relative;
+
+    padding: 0.15em 0.2em;
+
+    @include media-breakpoint-up(sm) {
+        padding: 0.15em 0.15em 0;
+    }
 }
