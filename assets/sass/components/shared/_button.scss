@@ -5,7 +5,7 @@
     font-weight: 600;
     text-transform: unset;
     padding: 0.75em 0.75em 0.7em;
-    border-radius: 0.5em;
+    border-radius: $radius-button;
     transition: 0.3s;
 
     &:hover {

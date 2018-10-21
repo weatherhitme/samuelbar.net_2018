@@ -3,6 +3,7 @@
     min-height: 300px;
     color: #fff;
     text-align: center;
+    overflow: hidden;
 
     @include media-breakpoint-up(md) {
         flex-direction: row;
@@ -40,6 +41,10 @@
     }
 
     .hero-container {
+
+        .slick-list {
+            width: 100%;
+        }
         @include media-breakpoint-down(sm) {
             width: calc(100% + 30px);
             display: flex !important;

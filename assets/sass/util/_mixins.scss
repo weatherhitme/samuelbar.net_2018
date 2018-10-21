@@ -1,6 +1,7 @@
 @mixin box-shadow($color: null) {
     box-shadow: 0 0 25px rgba(#000000, 0.25);
-    @if $color != null {
+
+    @if $color !=null {
         box-shadow: 0 0 25px rgba($color, 0.25);
     }
 }
@@ -11,7 +12,8 @@
 
 @mixin box-shadow-close($color: null) {
     box-shadow: 0 0 15px rgba(#000000, 0.25);
-    @if $color != null {
+
+    @if $color !=null {
         box-shadow: 0 0 15px rgba($color, 0.25);
     }
 }

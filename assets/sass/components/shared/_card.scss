@@ -1,10 +1,10 @@
 .card {
     @include box-shadow-close;
-    border-radius: 10px;
+    border-radius: $radius-window;
 
     &.inset {
         @include box-shadow-inset;
-        border-radius: 10px;
+        border-radius: $radius-window;
     }
 
     .card-img {

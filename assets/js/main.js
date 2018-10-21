@@ -10,11 +10,12 @@ $('.hero-container').slick({
     infinite: true,
     speed: 600,
     slidesToShow: 1,
-    vertical: true,
+    vertical: false,
+    mobileFirst: true,
     responsive: [{
         breakpoint: 768,
         settings: {
-            vertical: false,
+            vertical: true,
         }
     }]
 })
@@ -22,6 +23,10 @@ $('.hero-container').slick({
 $(document).ready(function () {
     $('.loading-hide').removeClass('loading-hide');
     tabbingBehaviour();
+
+    $(window).resize(function () {
+        $('.hero-container')[0].slick.refresh();
+    });
 });
 
 function tabbingBehaviour() {
@@ -34,6 +39,7 @@ function tabbingBehaviour() {
             window.addEventListener('mousedown', handleMouseDownOnce);
         }
     }
+
     function handleMouseDownOnce() {
         document.body.classList.remove('user-is-tabbing');
 

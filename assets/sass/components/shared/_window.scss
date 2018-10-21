@@ -10,7 +10,7 @@
 }
 
 .window {
-    border-radius: 15px;
+    border-radius: $radius-window;
     @include box-shadow-inset;
     padding: 1.5em 0;
     display: flex;
