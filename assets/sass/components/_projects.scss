@@ -1,0 +1,24 @@
+.project-container {
+    cursor: pointer;
+
+    + .project-container {
+        margin-top: 15px;
+    }
+
+    @include hover {
+        >.project-image {
+            margin-right: 50%;
+        }
+    }
+}
+
+.project-image {
+    @include aspect-ratio(3, 1);
+    @include aspect-focus(0%);
+    @include window-style;
+    transition: 0.3s;
+
+    >img {
+        transition: 0.3s;
+    }
+}

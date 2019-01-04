@@ -80,19 +80,34 @@ $px in $grid-breakpoints {
     background-color: #fff;
 }
 
-.link-red {
-    @include link-color($color-red-safe, $color-red-light);
+.link {
+    &-solid-red {
+        @include link-color($color-red-safe, $color-red-light);
 
-    &:hover {
-        @include link-color($color-red, #fff);
+        @include hover {
+            @include link-color($color-red, #fff);
+        }
     }
-}
-
-.link-blue {
-    @include link-color($color-blue-safe, $color-blue-light);
-
-    &:hover {
-        @include link-color($color-blue, #fff);
+    &-solid-blue {
+        @include link-color($color-blue-safe, $color-blue-light);
+    
+        @include hover {
+            @include link-color($color-blue, #fff);
+        }
+    }
+    &-red {
+        @include link-color($color-red-light, $color-red-safe);
+    
+        @include hover {
+            @include link-color($color-red, #fff);
+        }
+    }
+    &-blue {
+        @include link-color($color-blue-light, $color-blue-safe);
+    
+        @include hover {
+            @include link-color($color-blue, #fff);
+        }
     }
 }
 
@@ -147,4 +162,8 @@ $px in $grid-breakpoints {
 
 .loading-hide {
     visibility: hidden;
+}
+
+.window-style {
+    @include window-style-absolute;
 }

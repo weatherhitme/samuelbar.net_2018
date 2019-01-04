@@ -8,7 +8,7 @@
     border-radius: $radius-button;
     transition: 0.3s;
 
-    &:hover {
+    @include hover {
         transform: scale(1.025) translateY(-5px);
     }
 
@@ -19,7 +19,7 @@
             border: 3px solid $color-blue-safe;
             color: $color-blue-light;
 
-            &:hover {
+            @include hover {
                 @include box-shadow($color-blue);
                 background: $color-blue;
                 border: 3px solid $color-blue;
@@ -33,7 +33,7 @@
             border: 3px solid $color-red-safe;
             color: $color-red-light;
 
-            &:hover {
+            @include hover {
                 @include box-shadow($color-red);
                 background: $color-red;
                 border: 3px solid $color-red;
@@ -48,7 +48,7 @@
                 border: 3px solid #fff;
                 color: $color-blue-safe;
 
-                &:hover {
+                @include hover {
                     @include box-shadow($color-blue-safe);
                     background: $color-blue;
                     border: 3px solid $color-blue;
@@ -61,7 +61,7 @@
                 border: 3px solid #fff;
                 color: $color-red-safe;
 
-                &:hover {
+                @include hover {
                     @include box-shadow($color-red-safe);
                     background: $color-red;
                     border: 3px solid $color-red;
@@ -78,7 +78,7 @@
             border: 3px solid $color-blue-safe;
             color: $color-blue-safe;
 
-            &:hover {
+            @include hover {
                 @include box-shadow($color-blue);
                 background: $color-blue-safe;
                 color: #fff;
@@ -91,7 +91,7 @@
             border: 3px solid $color-red-safe;
             color: $color-red-safe;
 
-            &:hover {
+            @include hover {
                 @include box-shadow($color-red);
                 background: $color-red-safe;
                 color: #fff;

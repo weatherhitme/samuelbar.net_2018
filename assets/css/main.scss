@@ -15,11 +15,14 @@
 @import 'util/aspect';
 @import 'util/mixins';
 @import 'util/helpers';
+
 @import 'components/shared/hero';
 @import 'components/shared/card';
 @import 'components/shared/window';
 @import 'components/shared/button';
+
 @import 'components/currently';
 @import 'components/services';
+@import 'components/projects';
 @import 'base/global';
 @import 'base/navigation';

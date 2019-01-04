@@ -12,17 +12,13 @@ hero-desc: "Anywhere from general brand strategy, to front end web development, 
 ---
 
 <section class="services-section">
-    <h3 class="text-center">What I do</h3>
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta neque cum, libero laboriosam
-        voluptatem optio minus.
-    </p>
+    <h3 class="text-center">What I Do</h3>
     <div class="row">
 
         {% for i in (1..4) %}
 
         <div class="col-12 col-md-6 col-lg-3 service-container">
-            <div class="card service-card" tabindex='0'>
+            <div class="card service-card id-{{i}}">
                 <div class="card-img">
                     <img height="100"
                     {% if i == 1 %}src="assets/images/services/ID.svg"{% endif %}
@@ -43,6 +39,9 @@ hero-desc: "Anywhere from general brand strategy, to front end web development, 
 
         {% endfor %}
     </div>
+    <p>I really enjoy dipping my toes into whichever technologies are necessary to reach a satisfying solution. Across various hobby projects and creative pursuits, I've also worked with 3D Modelling, Video Editing, Pixel Art, Photography, and 3D Printing just to name a few.</p>
+    <p>For some examples of my professional work, visit the <a class="link-blue" href="/projects" target="_blank">Projects</a> section.</p>
+
 </section>
 
 {% include currently.html %}

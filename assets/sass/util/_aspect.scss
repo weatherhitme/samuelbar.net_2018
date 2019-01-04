@@ -46,6 +46,9 @@ height: 1,
 ),
 '3-1': (width: 3,
 height: 1,
+),
+'4-1': (width: 4,
+height: 1,
 ));
 
 
@@ -63,107 +66,114 @@ height: 1,
 $heights: (100, 120);
 
 .aspect-ratio {
-  position: relative;
-  overflow: hidden;
+    position: relative;
+    overflow: hidden;
 
-  @each $aspect,
-  $val in $aspect-ratios {
-    &.aspect-#{$aspect} {
-      padding-top: calc(100% / (#{map-get($val, width)} / #{map-get($val, height)}));
+    @each $aspect,
+    $val in $aspect-ratios {
+        &.aspect-#{$aspect} {
+            padding-top: calc(100% / (#{map-get($val, width)} / #{map-get($val, height)}));
 
-      @each $height in $heights {
-        &-#{$height} {
-          padding-top: 0;
-          height: #{$height}px;
-          width: calc(#{$height}px * (#{map-get($val, width)} / #{map-get($val, height)}));
-        }
-      }
-    }
-  }
-
-  @each $aspect,
-  $val in $aspect-ratios {
-
-    @each $br,
-    $px in $grid-breakpoints {
-      @include media-breakpoint-up($br) {
-        &.aspect-#{$br}-#{$aspect} {
-          padding-top: calc(100% / (#{map-get($val, width)} / #{map-get($val, height)}));
-
-          @each $height in $heights {
-            &-#{$height} {
-              padding-top: 0;
-              height: #{$height}px;
-              width: calc(#{$height}px * (#{map-get($val, width)} / #{map-get($val, height)}));
+            @each $height in $heights {
+                &-#{$height} {
+                    padding-top: 0;
+                    height: #{$height}px;
+                    width: calc(#{$height}px * (#{map-get($val, width)} / #{map-get($val, height)}));
+                }
             }
-          }
         }
-      }
     }
-  }
 
-  >img,
-  >div {
-    position: absolute;
-    top: 50%;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: block;
-    min-height: 100%;
-    width: 100%;
-    transform: translateY(-50%);
-    object-fit: cover;
-  }
+    @each $aspect,
+    $val in $aspect-ratios {
+
+        @each $br,
+        $px in $grid-breakpoints {
+            @include media-breakpoint-up($br) {
+                &.aspect-#{$br}-#{$aspect} {
+                    padding-top: calc(100% / (#{map-get($val, width)} / #{map-get($val, height)}));
+
+                    @each $height in $heights {
+                        &-#{$height} {
+                            padding-top: 0;
+                            height: #{$height}px;
+                            width: calc(#{$height}px * (#{map-get($val, width)} / #{map-get($val, height)}));
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    >img,
+    >div {
+        position: absolute;
+        top: 50%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: block;
+        min-height: 100%;
+        width: 100%;
+        transform: translateY(-50%);
+        object-fit: cover;
+    }
+}
+
+@mixin aspect-focus($pc) {
+    >img {
+        top: $pc;
+        transform: translateY(-#{$pc});
+    }
 }
 
 @mixin aspect-ratio($x, $y, $br:null, $height:null) {
 
-  @if $br==null and $height==null {
-    position: relative;
-    overflow: hidden;
+    @if $br==null and $height==null {
+        position: relative;
+        overflow: hidden;
 
-    padding-top: calc(100% / (#{$x} / #{$y}));
-  }
-
-  @else if $br and $height==null {
-    @include media-breakpoint-up($br) {
-      position: relative;
-      overflow: hidden;
-
-      padding-top: calc(100% / (#{$x} / #{$y}));
+        padding-top: calc(100% / (#{$x} / #{$y}));
     }
-  }
 
-  @else if $br and $height {
-    @include media-breakpoint-up($br) {
-      position: relative;
-      overflow: hidden;
+    @else if $br and $height==null {
+        @include media-breakpoint-up($br) {
+            position: relative;
+            overflow: hidden;
 
-      height: #{$height}px;
-      width: calc(#{$height}px * (#{$x} / #{$y}));
+            padding-top: calc(100% / (#{$x} / #{$y}));
+        }
     }
-  }
 
-  @else if $br==null and $height {
-    position: relative;
-    overflow: hidden;
-    
-    height: #{$height}px;
-    width: calc(#{$height}px * (#{$x} / #{$y}));
-  }
+    @else if $br and $height {
+        @include media-breakpoint-up($br) {
+            position: relative;
+            overflow: hidden;
 
-  >img,
-  >div {
-    position: absolute;
-    top: 50%;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: block;
-    min-height: 100%;
-    width: 100%;
-    transform: translateY(-50%);
-    object-fit: cover;
-  }
+            height: #{$height}px;
+            width: calc(#{$height}px * (#{$x} / #{$y}));
+        }
+    }
+
+    @else if $br==null and $height {
+        position: relative;
+        overflow: hidden;
+
+        height: #{$height}px;
+        width: calc(#{$height}px * (#{$x} / #{$y}));
+    }
+
+    >img,
+    >div {
+        position: absolute;
+        top: 50%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: block;
+        min-height: 100%;
+        width: 100%;
+        transform: translateY(-50%);
+        object-fit: cover;
+    }
 }

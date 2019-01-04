@@ -27,6 +27,12 @@ $(document).ready(function () {
     $(window).resize(function () {
         $('.hero-container')[0].slick.refresh();
     });
+
+    // enterClick($('.service-card'));
+    // $('.service-card').click(function () {
+    //     $('.service-card.active').removeClass('active');
+    //     $(this).toggleClass('active');
+    // });
 });
 
 function tabbingBehaviour() {
@@ -48,4 +54,12 @@ function tabbingBehaviour() {
     }
 
     window.addEventListener('keydown', handleFirstTab);
+}
+
+function enterClick(selector) {
+    selector.keypress(function (e) {
+        if (e.keyCode === 13) {
+            this.click();
+        }
+    });
 }

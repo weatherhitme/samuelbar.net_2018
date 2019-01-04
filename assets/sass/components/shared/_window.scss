@@ -10,8 +10,7 @@
 }
 
 .window {
-    border-radius: $radius-window;
-    @include box-shadow-inset;
+    @include window-style;
     padding: 1.5em 0;
     display: flex;
     flex-direction: column;
