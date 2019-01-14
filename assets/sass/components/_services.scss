@@ -42,9 +42,8 @@ section.services-section {
             }
 
             .card-body {
-                .card-title {
-                    font-size: $h5-size;
-                    font-weight: 600;
+                h5.card-title {
+                    display: inline-block;
                     transition: 0.3s;
                     transition-delay: 0.1s;
                 }

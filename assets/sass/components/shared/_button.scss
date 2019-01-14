@@ -9,7 +9,7 @@
     transition: 0.3s;
 
     @include hover {
-        transform: scale(1.025) translateY(-5px);
+        transform: scale(1.025) translateY(0px);
     }
 
     &.solid {
