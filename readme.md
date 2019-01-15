@@ -4,7 +4,7 @@ To run:
 ```
 gem install bundler jekyll
 ```
-2. In cmd/terminal and cd to directory:
+2. Open cmd/terminal and cd to directory:
 ```
 cd samuelbar.net_2018
 ```
