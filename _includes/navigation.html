@@ -1,7 +1,17 @@
 <header class="navbar">
-  <div class="container">
+  <nav class="container">
     <a href="{{site.url}}" name="Return to Homepage" class="logo-link">
       <img class="logo" alt="Logo Image" src="{{'/assets/images/logo.svg' | relative_url}}" height="80" >
     </a>
-  </div>
+
+
+    {% assign sorted_pages = site.pages | sort:"order"  %}
+    {% for node in sorted_pages %}
+      {% if node.title %}
+      <li class=" ">
+          <a href="{{ node.url | relative_url }}" class="">{{node.title}}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </nav>
 </header>

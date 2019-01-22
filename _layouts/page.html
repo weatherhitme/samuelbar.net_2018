@@ -8,13 +8,10 @@
 
     <main class="row" aria-label="Content">
 
+        {% include header.html %}
+
         <section class="content container">
-
-            {% include header.html %}
-
-            <div class="content-inner container">
-                {{ content }}
-            </div>
+            {{ content }}
         </section>
 
     </main>

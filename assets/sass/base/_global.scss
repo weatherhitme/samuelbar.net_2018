@@ -150,6 +150,10 @@ small,
     font-size: 0.707rem;
 }
 
+main {
+    margin: 15px 0;
+}
+
 section:not(:first-child) {
     margin-top: $section-gap-small;
 

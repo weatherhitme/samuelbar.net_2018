@@ -21,13 +21,14 @@ section.services-section {
                 .card-title {
                     color: $color-blue-safe;
                 }
+
                 .card-img {
                     transform: scale(1.05);
                 }
             }
 
             .card-img {
-                padding: 20px;
+                padding: 20px 10px 0;
                 transition-delay: 0.1s;
                 transition: 0.3s;
 
@@ -38,43 +39,52 @@ section.services-section {
 
                 img {
                     max-width: 100%;
+                    position: relative;
+                    margin: auto;
                 }
             }
 
             .card-body {
+                text-align: center;
+
                 h5.card-title {
                     display: inline-block;
                     transition: 0.3s;
                     transition-delay: 0.1s;
+                    position: relative;
+                    margin: auto;
                 }
             }
 
 
 
-            @include media-breakpoint-down(md) {
+            @include media-breakpoint-down(sm) {
                 @include make-row();
                 margin: 0;
 
                 .card-img {
-                    @include make-col(6);
+                    @include make-col(12);
                     display: flex;
-                    justify-content: center;
-                    text-align: right;
                 }
 
                 .card-body {
-                    @include make-col(6);
+                    @include make-col(12);
                     display: flex;
-                    align-items: center;
-
-                    text-align: left;
-                    justify-content: flex-start;
                 }
-
             }
-
         }
 
-
+        @include media-breakpoint-down(sm) {
+            &:nth-child(2n-1) {
+                .card-img {
+                    padding: 10px 0 0 20px;
+                }
+            }
+            &:nth-child(2n) {
+                .card-img {
+                    padding: 10px 20px 0 0;
+                }
+            }
+        }
     }
 }

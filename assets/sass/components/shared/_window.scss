@@ -25,7 +25,6 @@
     &.left,
     &.right {
         width: calc(100% - 15px * 2);
-        margin: 15px 0;
     }
 
     @include media-breakpoint-up(md) {

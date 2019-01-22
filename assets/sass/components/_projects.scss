@@ -1,24 +1,56 @@
-.project-container {
+.project {
     cursor: pointer;
+    @include window-style;
+    overflow: hidden;
+    position: relative;
 
-    + .project-container {
+    +.project {
         margin-top: 15px;
     }
 
-    @include hover {
-        >.project-image {
-            margin-right: 50%;
+    // @include hover {
+    //     >.project-image {
+    //         margin-left: 50%;
+    //     }
+    // }
+
+    .project-image {
+        @include aspect-ratio(1, 1);
+        @include aspect-focus(0%);
+        transition: 0.3s;
+
+        >img {
+            transition: 0.3s;
         }
     }
-}
 
-.project-image {
-    @include aspect-ratio(3, 1);
-    @include aspect-focus(0%);
-    @include window-style;
-    transition: 0.3s;
-
-    >img {
+    .project-label {
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+        width: calc(100% - 45px);
+        border-radius: 0 0 15px 15px;
+        background: rgba(#fff, 0.95);
+        color: $color-grey;
+        display: inline;
+        padding: 20px;
         transition: 0.3s;
+
+        h4 {
+            text-align: center;
+            margin: 0;
+        }
+
+        .project-desc {
+            bottom: 0;
+            width: calc(100% + 45px);
+        }
+
+        @include hover {
+            width: 100%;
+            height: 100%;
+        }
     }
 }
