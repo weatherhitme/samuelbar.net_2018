@@ -17,7 +17,7 @@ url: "http://samuelbar.net" # the base hostname & protocol for your site
 # Markdown settings
 markdown: kramdown
 
-theme: jekyll-theme-boilerplate
+# theme: jekyll-theme-boilerplate
 
 # Sass settings
 sass:
