@@ -21,7 +21,7 @@
         overflow: hidden;
         margin-bottom: 0.5em;
 
-        font-size: $h2-size;
+        @include h2;
 
         @include responsive-headings(lg, $h2-size, 0.8);
         @include responsive-headings(md, $h2-size, 0.75);

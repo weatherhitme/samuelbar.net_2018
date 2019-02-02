@@ -42,40 +42,68 @@
 
 }
 
-@mixin h1-size {
+@mixin heading-setup {
+    margin: 1.414em 0 0.5em;
+    line-height: 1.2;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &:only-child {
+        margin: 0;
+    }
+}
+
+@mixin h1 {
     $size: $h1-size;
     font-size: $size;
+    @include heading-setup;
     @include responsive-headings(md, $size, 0.9);
+    margin-top: 0;
+    font-family: $font-family--heading;
+    font-weight: 700;
 }
 
-@mixin h2-size {
+@mixin h2 {
     $size: $h2-size;
     font-size: $size;
+    @include heading-setup;
     @include responsive-headings(md, $size, 0.9);
+    font-weight: 700;
+    font-family: $font-family--heading;
 }
 
-@mixin h3-size {
+@mixin h3 {
     $size: $h3-size;
     font-size: $size;
+    @include heading-setup;
     @include responsive-headings(md, $size, 0.9);
+    font-weight: 800;
 }
 
-@mixin h4-size {
+@mixin h4 {
     $size: $h4-size;
     font-size: $size;
+    @include heading-setup;
     @include responsive-headings(md, $size, 0.9);
+    font-weight: 700;
 }
 
-@mixin h5-size {
+@mixin h5 {
     $size: $h5-size;
     font-size: $size;
+    @include heading-setup;
     @include responsive-headings(md, $size, 0.9);
+    font-weight: 700;
 }
 
-@mixin h6-size {
+@mixin h6 {
     $size: $h6-size;
     font-size: $size;
+    @include heading-setup;
     @include responsive-headings(md, $size, 0.9);
+    font-weight: 700;
 }
 
 @mixin link-color($bg, $color) {
