@@ -106,7 +106,7 @@
     font-weight: 700;
 }
 
-@mixin link-color($bg, $color) {
+@mixin link($bg, $color) {
     background-color: $bg;
     border-radius: 0.1em;
     color: $color;
@@ -119,12 +119,6 @@
     border-bottom: none;
     text-decoration: none;
     position: relative;
-
-    padding: 0.15em 0.2em;
-
-    @include media-breakpoint-up(sm) {
-        padding: 0.2em 0.15em 0;
-    }
 }
 
 @mixin window-style {

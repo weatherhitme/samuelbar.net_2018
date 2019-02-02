@@ -80,49 +80,13 @@ $px in $grid-breakpoints {
     background-color: #fff;
 }
 
-.link {
-    &-solid-red {
-        @include link-color($color-red-safe, $color-red-light);
-
-        @include hover {
-            @include link-color($color-red, #fff);
-        }
-    }
-    &-solid-blue {
-        @include link-color($color-blue-safe, $color-blue-light);
-    
-        @include hover {
-            @include link-color($color-blue, #fff);
-        }
-    }
+.text {
     &-red {
-        @include link-color($color-red-light, $color-red-safe);
-    
-        @include hover {
-            @include link-color($color-red, #fff);
-        }
+        color: $color-red;
     }
+
     &-blue {
-        @include link-color($color-blue-light, $color-blue-safe);
-    
-        @include hover {
-            @include link-color($color-blue, #fff);
-        }
-    }
-}
-
-h1,
-h2,
-h3,
-h4 {
-    &.text {
-        &-red {
-            color: $color-red;
-        }
-
-        &-blue {
-            color: $color-blue;
-        }
+        color: $color-blue;
     }
 }
 
@@ -142,6 +106,30 @@ h4 {
     text-align: right;
 }
 
+.h1 {
+    @include h1;
+}
+
+.h2 {
+    @include h2;
+}
+
+.h3 {
+    @include h3;
+}
+
+.h4 {
+    @include h4;
+}
+
+.h5 {
+    @include h5;
+}
+
+.h6 {
+    @include h6;
+}
+
 @each $br,
 $px in $grid-breakpoints {
 
@@ -156,6 +144,30 @@ $px in $grid-breakpoints {
 
         .text-#{$br}-right {
             text-align: right;
+        }
+
+        .h1-#{$br} {
+            @include h1;
+        }
+
+        .h2-#{$br} {
+            @include h2;
+        }
+
+        .h3-#{$br} {
+            @include h3;
+        }
+
+        .h4-#{$br} {
+            @include h4;
+        }
+
+        .h5-#{$br} {
+            @include h5;
+        }
+
+        .h6-#{$br} {
+            @include h6;
         }
     }
 }
