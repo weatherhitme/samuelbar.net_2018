@@ -1,0 +1,18 @@
+---
+layout: page
+permalink: "/blog/"
+title: Blog
+desc: "A collection of thoughts and techniques. I like to think about technical concepts and challenging problems, and
+writing about them here helps me work them through."
+---
+
+<div class="blog-container row">
+    {% for post in site.posts %}
+
+    <div class="blog-post col-12">
+            <h4>{{post.title}}</h4>
+            <div class="project-desc"></div>
+    </div>
+
+    {% endfor %}
+</div>
