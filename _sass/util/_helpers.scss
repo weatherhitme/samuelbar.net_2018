@@ -1,181 +1,172 @@
 // Bootstrap responsive container/row classes
-@each $br,
-$px in $grid-breakpoints {
-    @include media-breakpoint-up($br) {
+@each $br, $px in $grid-breakpoints {
+	@include media-breakpoint-up($br) {
+		.row-#{$br} {
+			@include make-row();
+		}
 
-        .row-#{$br} {
-            @include make-row();
-        }
+		.container-#{$br} {
+			@include make-container();
+		}
 
-        .container-#{$br} {
-            @include make-container();
-        }
+		.container-#{$br} {
+			@include make-container();
+		}
+	}
 
-        .container-#{$br} {
-            @include make-container();
-        }
-    }
+	@include media-breakpoint-down($br) {
+		.row-#{$br}-down {
+			@include make-row();
+		}
 
-    @include media-breakpoint-down($br) {
+		.container-#{$br}-down {
+			@include make-container();
+		}
 
-        .row-#{$br}-down {
-            @include make-row();
-        }
-
-        .container-#{$br}-down {
-            @include make-container();
-        }
-
-        .container-#{$br}-down {
-            @include make-container();
-        }
-    }
-}
-
-.text-red {
-    color: $color-red;
-}
-
-.text-red-safe {
-    color: $color-red-safe;
-}
-
-.text-blue {
-    color: $color-blue;
-}
-
-.text-blue-safe {
-    color: $color-blue-safe;
-}
-
-.text-grey {
-    color: $color-grey;
-}
-
-.text-white {
-    color: #fff;
-}
-
-.bg-red {
-    background-color: $color-red;
-
-    &-light {
-        background-color: $color-red-light
-    }
-}
-
-.bg-blue {
-    background-color: $color-blue;
-
-    &-light {
-        background-color: $color-blue-light
-    }
-}
-
-.bg-grey {
-    background-color: $color-grey;
-}
-
-.bg-white {
-    background-color: #fff;
+		.container-#{$br}-down {
+			@include make-container();
+		}
+	}
 }
 
 .text {
-    &-red {
-        color: $color-red;
-    }
+	&-red {
+		color: $color-red !important;
+		&-safe {
+			color: $color-red-safe !important;
+		}
+	}
 
-    &-blue {
-        color: $color-blue;
+	&-blue {
+		color: $color-blue !important;
+		&-safe {
+			color: $color-blue-safe !important;
+		}
+	}
+
+    &-grey {
+        color: $color-grey !important;
+    }
+    
+    &-white {
+        color: #fff !important;
+    }
+}
+
+.bg {
+	&-red {
+		background-color: $color-red !important;
+		&-safe {
+			background-color: $color-red-safe !important;
+		}
+		&-light {
+			background-color: $color-red-light !important;
+		}
+	}
+
+	&-blue {
+		background-color: $color-blue !important;
+		&-safe {
+			background-color: $color-blue-safe !important;
+		}
+		&-light {
+			background-color: $color-blue-light !important;
+		}
+	}
+
+    &-grey {
+        background-color: $color-grey !important;
+    }
+    
+    &-white {
+        background-color: #fff !important;
     }
 }
 
 .text-uppercase {
-    text-transform: uppercase;
+	text-transform: uppercase;
 }
 
 .text-center {
-    text-align: center;
+	text-align: center;
 }
 
 .text-left {
-    text-align: left;
+	text-align: left;
 }
 
 .text-right {
-    text-align: right;
+	text-align: right;
 }
 
 .h1 {
-    @include h1;
+	@include h1;
 }
 
 .h2 {
-    @include h2;
+	@include h2;
 }
 
 .h3 {
-    @include h3;
+	@include h3;
 }
 
 .h4 {
-    @include h4;
+	@include h4;
 }
 
 .h5 {
-    @include h5;
+	@include h5;
 }
 
 .h6 {
-    @include h6;
+	@include h6;
 }
 
-@each $br,
-$px in $grid-breakpoints {
+@each $br, $px in $grid-breakpoints {
+	@include media-breakpoint-up($br) {
+		.text-#{$br}-center {
+			text-align: center;
+		}
 
-    @include media-breakpoint-up($br) {
-        .text-#{$br}-center {
-            text-align: center;
-        }
+		.text-#{$br}-left {
+			text-align: left;
+		}
 
-        .text-#{$br}-left {
-            text-align: left;
-        }
+		.text-#{$br}-right {
+			text-align: right;
+		}
 
-        .text-#{$br}-right {
-            text-align: right;
-        }
+		.h1-#{$br} {
+			@include h1;
+		}
 
-        .h1-#{$br} {
-            @include h1;
-        }
+		.h2-#{$br} {
+			@include h2;
+		}
 
-        .h2-#{$br} {
-            @include h2;
-        }
+		.h3-#{$br} {
+			@include h3;
+		}
 
-        .h3-#{$br} {
-            @include h3;
-        }
+		.h4-#{$br} {
+			@include h4;
+		}
 
-        .h4-#{$br} {
-            @include h4;
-        }
+		.h5-#{$br} {
+			@include h5;
+		}
 
-        .h5-#{$br} {
-            @include h5;
-        }
-
-        .h6-#{$br} {
-            @include h6;
-        }
-    }
+		.h6-#{$br} {
+			@include h6;
+		}
+	}
 }
 
 .loading-hide {
-    visibility: hidden;
+	visibility: hidden;
 }
 
 .window-style {
-    @include window-style-absolute;
+	@include window-style-absolute;
 }

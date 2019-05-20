@@ -22,6 +22,30 @@
         >img {
             transition: 0.3s;
         }
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			opacity: 0.5;
+			z-index: 1;
+			background: rgba(0, 0, 0, 0.6);
+			background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+			background: -webkit-gradient(
+				left top,
+				right top,
+				color-stop(0%, rgba(0, 0, 0, 0.6)),
+				color-stop(100%, rgba(0, 0, 0, 0))
+			);
+			background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+			background: -o-linear-gradient(left, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+			background: -ms-linear-gradient(left, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+			background: linear-gradient(to right, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=1 );
+		}
     }
 
     .project-label {
@@ -37,6 +61,7 @@
         display: inline;
         padding: 20px;
         transition: 0.3s;
+        z-index: 1;
 
         h4 {
             text-align: center;
