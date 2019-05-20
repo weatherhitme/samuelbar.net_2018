@@ -3,17 +3,10 @@ layout: page
 permalink: "/projects/"
 title: Projects
 desc: "Across my full-time work, jobs I\'ve taken on in my spare time, and small projects during university, I take immense pride in the variety and quality of the work I produce."
-projects: 
-    - name: WA Industry Link
-      company: Department of Jobs, Tourism, Science & Innovation
-      image: /assets/images/projects/industrylink.wa.gov.au_ (1).png
-    - name: Reform Physique
-      company: 
-      image:
 ---
 
 <div class="projects-container row">
-    {% for project in page.projects %}
+    {% for project in site.categories.projects %}
 
     <div class="col-12 col-md-6 col-lg-4">
         <div class="project">
@@ -21,7 +14,7 @@ projects:
                 <img src="{{ project.image }}">
             </div>
             <div class="project-label">
-                <h4>{{project.name}}</h4>
+                <h4>{{project.title}}</h4>
                 <div class="project-desc"></div>
             </div>
         </div>

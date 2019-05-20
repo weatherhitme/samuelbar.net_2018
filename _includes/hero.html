@@ -5,7 +5,9 @@
                 {% for hero in page.hero-list %}
                 <div class='{% if forloop.index0 != 0 %} loading-hide {% endif %}'>
                     <span class='hero-text text-uppercase'>"{{ hero }}"
-                        <span class='hero-text-shadow'>"{{ hero }}"</span>
+                        <!-- <span class='hero-text-shadow'>"{{ hero }}"</span> -->
+                        <span class='hero-text-red'>"{{ hero }}"</span>
+                        <span class='hero-text-blue'>"{{ hero }}"</span>
                     </span>
                 </div>
                 {% endfor %}

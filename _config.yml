@@ -22,8 +22,8 @@ markdown: kramdown
 # Sass settings
 sass:
   add_charset: true
-  sass_dir: assets/sass
-  style: :compressed
+  sass_dir: _sass
+  style: compressed
 
 include: ['_pages']
 
