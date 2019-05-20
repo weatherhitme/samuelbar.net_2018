@@ -1,81 +1,53 @@
 .project {
-    cursor: pointer;
-    @include window-style;
-    overflow: hidden;
-    position: relative;
+	cursor: pointer;
+	@include window-style;
+	overflow: hidden;
+	position: relative;
 
-    +.project {
-        margin-top: 15px;
-    }
+	+ & {
+		margin-top: 15px;
+	}
 
-    // @include hover {
-    //     >.project-image {
-    //         margin-left: 50%;
-    //     }
-    // }
-
-    .project-image {
-        @include aspect-ratio(1, 1);
-        @include aspect-focus(0%);
-        transition: 0.3s;
-
-        >img {
-            transition: 0.3s;
-        }
-
-		&::before {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			opacity: 0.5;
-			z-index: 1;
-			background: rgba(0, 0, 0, 0.6);
-			background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
-			background: -webkit-gradient(
-				left top,
-				right top,
-				color-stop(0%, rgba(0, 0, 0, 0.6)),
-				color-stop(100%, rgba(0, 0, 0, 0))
-			);
-			background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
-			background: -o-linear-gradient(left, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
-			background: -ms-linear-gradient(left, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
-			background: linear-gradient(to right, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=1 );
+	@include hover {
+		.project-overlay {
+			opacity: 1;
 		}
-    }
+	}
 
-    .project-label {
-        display: inline-block;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        top: 0;
-        width: calc(100% - 45px);
-        border-radius: 0 0 15px 15px;
-        background: rgba(#fff, 0.95);
-        color: $color-grey;
-        display: inline;
-        padding: 20px;
-        transition: 0.3s;
-        z-index: 1;
+	&-image {
+		@include aspect-ratio(3, 1);
+		@include aspect-focus(0%);
+		transition: 0.3s;
 
-        h4 {
-            text-align: center;
-            margin: 0;
-        }
+		> img {
+			transition: 0.3s;
+		}
+	}
 
-        .project-desc {
-            bottom: 0;
-            width: calc(100% + 45px);
-        }
+	&-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
 
-        @include hover {
-            width: 100%;
-            height: 100%;
-        }
-    }
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		color: $color-blue-safe;
+		background: rgba($color-blue-light, 1);
+		opacity: 0;
+		padding: 20px;
+
+		padding: 10vh 10vw;
+		transition: 0.3s;
+		z-index: 1;
+
+		h4 {
+			// margin: 0;
+		}
+	}
+
+	&-desc {
+	}
 }
