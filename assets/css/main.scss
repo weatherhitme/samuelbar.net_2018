@@ -16,11 +16,12 @@
 @import 'util/mixins';
 @import 'util/helpers';
 
-@import 'components/shared/hero';
+@import 'components/shared/banner';
+@import 'components/shared/button';
 @import 'components/shared/card';
+@import 'components/shared/hero';
 @import 'components/shared/link';
 @import 'components/shared/window';
-@import 'components/shared/button';
 
 @import 'components/currently';
 @import 'components/services';

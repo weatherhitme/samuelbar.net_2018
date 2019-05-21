@@ -29,6 +29,12 @@
 	}
 }
 
+@each $pos in (middle, top, right, bottom, left) {
+	.bg-focus-#{$pos} {
+		@include bg-focus($pos, !important);
+	} // .bg-focus-middle, etc...
+}
+
 .text {
 	&-red {
 		color: $color-red !important;

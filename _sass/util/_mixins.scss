@@ -30,6 +30,14 @@
     box-shadow: inset 0 0 25px rgba(#000000, 0.25);
 }
 
+@mixin box-shadow-faint-inset {
+    box-shadow: inset 0 0 25px rgba(#000000, 0.15);
+}
+
+@mixin box-shadow-close-faint-inset {
+    box-shadow: inset 0 0 15px rgba(#000000, 0.15);
+}
+
 @mixin box-shadow-far-inset {
     box-shadow: inset 0 0 40px rgba(#000000, 0.25);
 }
@@ -56,7 +64,7 @@
 }
 
 @mixin h1 {
-    $size: $h1-size;
+    $size: $size-h1;
     font-size: $size;
     @include heading-setup;
     @include responsive-headings(md, $size, 0.9);
@@ -66,7 +74,7 @@
 }
 
 @mixin h2 {
-    $size: $h2-size;
+    $size: $size-h2;
     font-size: $size;
     @include heading-setup;
     @include responsive-headings(md, $size, 0.9);
@@ -75,7 +83,7 @@
 }
 
 @mixin h3 {
-    $size: $h3-size;
+    $size: $size-h3;
     font-size: $size;
     @include heading-setup;
     @include responsive-headings(md, $size, 0.9);
@@ -83,7 +91,7 @@
 }
 
 @mixin h4 {
-    $size: $h4-size;
+    $size: $size-h4;
     font-size: $size;
     @include heading-setup;
     @include responsive-headings(md, $size, 0.9);
@@ -91,7 +99,7 @@
 }
 
 @mixin h5 {
-    $size: $h5-size;
+    $size: $size-h5;
     font-size: $size;
     @include heading-setup;
     @include responsive-headings(md, $size, 0.9);
@@ -99,7 +107,7 @@
 }
 
 @mixin h6 {
-    $size: $h6-size;
+    $size: $size-h6;
     font-size: $size;
     @include heading-setup;
     @include responsive-headings(md, $size, 0.9);
@@ -147,4 +155,24 @@
     &:focus {
         @content;
     }
+}
+
+@mixin bg-focus($position: middle, $important:null) {
+	// top, right, bottom, left, middle
+
+	@if $position == middle {
+		background-position: center $important;
+	}
+	@if $position == top {
+		background-position: center 15% $important;
+	}
+	@if $position == right {
+		background-position: 85% center $important;
+	}
+	@if $position == bottom {
+		background-position: center 85% $important;
+	}
+	@if $position == left {
+		background-position: 15% center $important;
+	}
 }

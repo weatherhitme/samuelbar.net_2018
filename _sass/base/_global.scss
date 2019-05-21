@@ -32,7 +32,8 @@ body {
     color: $color-grey;
 
     &.user-is-tabbing *:focus {
-        outline: solid 5px red;
+        outline: dotted 2px $color-blue-safe;
+        outline-offset: 3px;
     }
 
     &:not(.user-is-tabbing) {

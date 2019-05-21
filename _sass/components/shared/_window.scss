@@ -24,7 +24,7 @@
     &.full,
     &.left,
     &.right {
-        // width: calc(100% - 15px * 2);
+        width: calc(100% - 15px * 2);
     }
 
     @include media-breakpoint-up(md) {

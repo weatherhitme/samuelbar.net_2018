@@ -25,14 +25,59 @@ $(document).ready(function () {
     tabbingBehaviour();
 
     $(window).resize(function () {
-        $('.hero-container')[0].slick.refresh();
+        if ($('.hero-container').length)
+            $('.hero-container')[0].slick.refresh();
     });
 
-    // enterClick($('.service-card'));
-    // $('.service-card').click(function () {
-    //     $('.service-card.active').removeClass('active');
-    //     $(this).toggleClass('active');
-    // });
+    // Below from https://stackoverflow.com/a/31410149
+    var mobile = desktop = false;
+    var resizeTimer, width;
+
+    $(window).resize(function () {
+        // clear the timeout
+        clearTimeout(resizeTimer);
+
+        // execute breakpointChange() once the viewport 
+        // has stopped changing in size for 400ms
+        resizeTimer = setTimeout(breakpointChange(), 400);
+    });
+
+    function breakpointChange() {
+        width = window.innerWidth;
+        if (!mobile && width < 992) {
+            desktop = false;
+            mobile = true;
+            $("body").removeClass("desktop");
+            $("body").addClass("mobile");
+            console.log("mobile")
+        }
+        if (!desktop && width >= 992) {
+            mobile = false;
+            desktop = true;
+            $("body").removeClass("mobile");
+            $("body").addClass("desktop");
+            console.log("desktop")
+        }
+    }
+    $(window).resize();
+
+
+    enterClick($('a.project-inner'));
+    $('a.project-inner').click(function (e) {
+        var $this = $(this);
+        var isTappable = $this.hasClass('tappable');
+        if (mobile && !isTappable) {
+            e.preventDefault();
+            $this.addClass('tappable');
+        }
+    })
+    $('a.project-inner').mouseout(function () {
+        var $this = $(this);
+        var isTappable = $this.hasClass('tappable');
+        if (mobile && isTappable) {
+            $this.removeClass("tappable")
+        }
+    })
 });
 
 function tabbingBehaviour() {

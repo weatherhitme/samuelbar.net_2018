@@ -1,21 +1,31 @@
+.projects-container {
+	margin-top: -15px;
+	margin-bottom: -15px;
+}
+
 .project {
-	cursor: pointer;
-	@include window-style;
-	overflow: hidden;
-	position: relative;
+	margin: 15px 0;
 
-	+ & {
-		margin-top: 15px;
-	}
+	&-inner {
+		cursor: pointer;
+		display: block;
+		@include window-style;
+		overflow: hidden;
+		position: relative;
+		@include box-shadow-faint;
+		border: 10px solid #fff;
+		transition: 0.3s ease;
 
-	@include hover {
-		.project-overlay {
-			opacity: 1;
+		@include hover-focus {
+			.project-overlay {
+				// @include box-shadow-faint-inset;
+				opacity: 1;
+			}
 		}
 	}
 
 	&-image {
-		@include aspect-ratio(3, 1);
+		@include aspect-ratio(1.5, 1);
 		@include aspect-focus(0%);
 		transition: 0.3s;
 
@@ -35,19 +45,39 @@
 		justify-content: center;
 		flex-direction: column;
 		color: $color-blue-safe;
-		background: rgba($color-blue-light, 1);
+		background: rgba($color-blue-light, 0.95);
 		opacity: 0;
 		padding: 20px;
-
-		padding: 10vh 10vw;
+		box-shadow: none;
 		transition: 0.3s;
 		z-index: 1;
+		font-size: 16px;
 
-		h4 {
-			// margin: 0;
+		padding: 0 2em;
+		@include media-breakpoint-up(lg) {
+			padding: 0 3em;
+			font-size: 14px;
+
+			h4 {
+				font-size: $size-h5;
+			}
+		}
+		@include media-breakpoint-up(xl) {
+			font-size: 16px;
+		}
+
+		p {
+			text-decoration: underline;
+			font-weight: 700;
 		}
 	}
 
 	&-desc {
+		font-weight: 600;
+		margin-top: -0.5em;
+	}
+
+	&-roles {
+		margin: 1em 0;
 	}
 }

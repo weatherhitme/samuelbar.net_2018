@@ -25,9 +25,9 @@
 
 		@include h2;
 
-		@include responsive-headings(lg, $h2-size, 0.8);
-		@include responsive-headings(md, $h2-size, 0.75);
-		@include responsive-headings(sm, $h3-size, 0.8);
+		@include responsive-headings(lg, $size-h2, 0.8);
+		@include responsive-headings(md, $size-h2, 0.75);
+		@include responsive-headings(sm, $size-h3, 0.8);
 
 		@include media-breakpoint-up(md) {
 			margin: 0;

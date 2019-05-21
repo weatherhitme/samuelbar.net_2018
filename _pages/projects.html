@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: list
 permalink: "/projects/"
 title: Projects
 desc: "Across my full-time work, jobs I\'ve taken on in my spare time, and small projects during university, I take immense pride in the variety and quality of the work I produce."
@@ -8,16 +8,18 @@ desc: "Across my full-time work, jobs I\'ve taken on in my spare time, and small
 <div class="projects-container row">
     {% for project in site.categories.projects %}
 
-    <div class="col-12">
-        <div class="project">
+    <div class="project col-12 col-lg-6">
+        <a href="{{ project.url | relative_url }}" class="project-inner">
             <div class="project-image">
-                <img src="{{ project.image }}">
+                <img src="{{ project.thumb }}">
             </div>
             <div class="project-overlay">
                 <h4>{{project.title}}</h4>
-                <div class="project-desc"> {{project.desc}}</div>
+                <div class="project-desc">{{project.desc}}</div>
+                <div class="project-roles">{{project.roles}}</div>
+                <p>Read more</p>
             </div>
-        </div>
+        </a>
     </div>
     
     {% endfor %}
