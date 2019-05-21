@@ -35,58 +35,18 @@
 	} // .bg-focus-middle, etc...
 }
 
-.text {
-	&-red {
-		color: $color-red !important;
-		&-safe {
-			color: $color-red-safe !important;
+@each $color, $val in $var-colors {
+	.text {
+		&-#{$color} {
+			color: color($color) !important;
 		}
 	}
 
-	&-blue {
-		color: $color-blue !important;
-		&-safe {
-			color: $color-blue-safe !important;
+	.bg {
+		&-#{$color} {
+			background-color: color($color) !important;
 		}
 	}
-
-    &-grey {
-        color: $color-grey !important;
-    }
-    
-    &-white {
-        color: #fff !important;
-    }
-}
-
-.bg {
-	&-red {
-		background-color: $color-red !important;
-		&-safe {
-			background-color: $color-red-safe !important;
-		}
-		&-light {
-			background-color: $color-red-light !important;
-		}
-	}
-
-	&-blue {
-		background-color: $color-blue !important;
-		&-safe {
-			background-color: $color-blue-safe !important;
-		}
-		&-light {
-			background-color: $color-blue-light !important;
-		}
-	}
-
-    &-grey {
-        background-color: $color-grey !important;
-    }
-    
-    &-white {
-        background-color: #fff !important;
-    }
 }
 
 .text-uppercase {
@@ -127,6 +87,12 @@
 
 .h6 {
 	@include h6;
+}
+
+@each $margin, $val in  ("0_5": 0.5,"1":1,"2":3) {
+    .m-bottom-#{$margin}em {
+        margin-bottom: #{$val}em;
+    }
 }
 
 @each $br, $px in $grid-breakpoints {

@@ -1,5 +1,5 @@
 .hero {
-	background-color: $color-grey;
+	background-color: color("grey");
 	min-height: 300px;
 	color: #fff;
 	text-align: center;
@@ -46,7 +46,7 @@
 			top: 0.05em;
 			right: 0.05em;
 			width: 100%;
-            color: $color-red;
+            color: color("red");
             z-index: -1;
 		}
 
@@ -55,7 +55,7 @@
 			top: -0.05em;
 			right: -0.05em;
             width: 100%;
-            color: $color-blue;
+            color: color("blue");
             z-index: -1;
 		}
 	}

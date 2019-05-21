@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: page.lang | default: 'en' }}">
 
-{% include head.html %}
+    {% include head.html %}
 
-<body>
-    {% include navigation.html %}
+    <body>
+        {% include navigation.html %}
 
-    <main aria-label="Content">
+        <main aria-label="Content">
 
-        {% include banner.html %}
+            {% include header.html %}
 
-        <section class="content container">
-            <h2>{{page.title}}</h2>
-            {{ content }}
-        </section>
+            <section class="content container">
+                {{ content }}
+            </section>
 
-    </main>
+        </main>
 
-    {% include scripts.html %}
+        {% include scripts.html %}
 
-</body>
+    </body>
 
 </html>

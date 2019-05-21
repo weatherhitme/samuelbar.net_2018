@@ -59,7 +59,7 @@ $(document).ready(function () {
             console.log("desktop")
         }
     }
-    $(window).resize();
+    breakpointChange();
 
 
     enterClick($('a.project-inner'));

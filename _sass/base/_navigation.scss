@@ -1,8 +1,55 @@
 header.navbar {
-  height: 120px;
-  @include box-shadow-far;
+	height: 120px;
+	@include box-shadow-far;
 
-  .logo {
-    mix-blend-mode: multiply;
-  }
+	&,
+	nav {
+		display: flex;
+		align-items: center;
+    }
+    
+    h1 {
+        font-size: $size-h5;
+        margin: 0;
+        margin-left: 1em;
+        user-select: none;
+        pointer-events: none;
+
+        @include media-breakpoint-up(md) {
+            font-size: $size-h4;
+        }
+    }
+
+	nav {
+		ul {
+            margin-left: auto;
+			li {
+				list-style: none;
+				display: inline-block;
+				font-weight: 700;
+				text-transform: uppercase;
+				margin-left: 2em;
+
+				a {
+                    text-decoration: none;
+                    font-family: $font-family--heading;
+                    color: color("grey");
+                    transition: 0.3s ease;
+
+					@include hover-focus {
+						color: color("red-safe");
+						text-decoration: underline;
+                    }
+                    
+                    &.active {
+                        color: color("blue-safe");
+                    }
+				}
+			}
+		}
+	}
+
+	.logo {
+		mix-blend-mode: multiply;
+	}
 }

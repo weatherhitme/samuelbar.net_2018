@@ -1,9 +1,11 @@
 <!-- start header.html -->
 <section class='window-container container'>
-    <div class='hero window full'>
-        <div class="col-10 text-left">
+    <div class='hero window bg-{{page.header-color}}-light text-{{page.header-color}}-safe'>
+        <div class="col-11 col-sm-10 text-left">
             <h2>{{ page.title }}</h2>
-            {% if page.desc %}
+            {% if page.desc-long %}
+            <p>{{ page.desc-long }}</p>
+            {% else if page.desc %}
             <p>{{ page.desc }}</p>
             {% endif %}
         </div>

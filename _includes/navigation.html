@@ -1,17 +1,19 @@
 <header class="navbar">
-  <nav class="container">
-    <a href="{{site.url}}" name="Return to Homepage" class="logo-link">
-      <img class="logo" alt="Logo Image" src="{{'/assets/images/logo.svg' | relative_url}}" height="80" >
-    </a>
+    <nav class="container">
+        <a href="{{site.url}}" name="Return to Homepage" class="logo-link">
+            <img class="logo" alt="Logo Image" src="{{'/assets/images/logo.svg' | relative_url}}" height="80">
+        </a>
+        <h1>SAMUEL<br><span class="text-blue">BARNETT</span></h1>
 
-
-    {% assign sorted_pages = site.pages | sort:"order"  %}
-    {% for node in sorted_pages %}
-      {% if node.title %}
-      <li class=" ">
-          <a href="{{ node.url | relative_url }}" class="">{{node.title}}</a>
-        </li>
-      {% endif %}
-    {% endfor %}
-  </nav>
+        <ul>
+            {% assign sorted_pages = site.pages | sort:"order"  %}
+            {% for node in sorted_pages %}
+            {% if node.title %}
+            <li class=" ">
+                <a href="{{ node.url | relative_url }}" class="{% if node.url == page.url %}active{% endif %}">{{node.title}}</a>
+            </li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+    </nav>
 </header>

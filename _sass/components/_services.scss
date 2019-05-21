@@ -19,7 +19,7 @@ section.services-section {
                 transform: translateY(-3px) scale(1.025);
 
                 .card-title {
-                    color: $color-blue-safe;
+                    color: color("blue-safe");
                 }
 
                 .card-img {

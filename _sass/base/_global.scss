@@ -29,10 +29,10 @@ body {
     font-family: $font-family;
     font-weight: 400;
     line-height: 1.45;
-    color: $color-grey;
+    color: color("grey");
 
     &.user-is-tabbing *:focus {
-        outline: dotted 2px $color-blue-safe;
+        outline: dotted 2px color("blue-safe");
         outline-offset: 3px;
     }
 
@@ -49,9 +49,17 @@ body {
     }
 }
 
+main img {
+    max-width: 100%;
+}
+
 p {
     font-weight: 400;
     margin-bottom: 1.3em;
+
+    &:first-child {
+        margin-top: 0;
+    }
 
     &:last-child {
         margin-bottom: 0;
@@ -92,7 +100,7 @@ small,
 }
 
 main {
-    margin: 15px 0;
+    margin: 30px 0;
 }
 
 section:not(:first-child) {

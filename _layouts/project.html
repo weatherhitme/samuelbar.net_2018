@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: page.lang | default: 'en' }}">
+
+    {% include head.html %}
+
+    <body>
+        {% include navigation.html %}
+
+        <main aria-label="Content">
+
+            {% include header.html %}
+
+            <section class="content container">
+                <div class="row">
+
+                    <div class="col-12 col-md-8 order-2 order-md-1">
+                        {{ content }}
+                    </div>
+
+                    <div class="col-12 col-md-4 order-1 order-md-2">
+                        <div class="project-role-list window bg-grey-light text-grey">
+                            <h5 class="text-uppercase">Roles</h5>
+                            <ul>
+                                {% for role in page.roles %}
+                                <li>
+                                    {{ role }}
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        {% include scripts.html %}
+
+    </body>
+
+</html>

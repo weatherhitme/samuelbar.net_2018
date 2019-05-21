@@ -1,28 +1,30 @@
 ---
-layout: list
+layout: page
 permalink: "/projects/"
 title: Projects
+order: 2
 desc: "Across my full-time work, jobs I\'ve taken on in my spare time, and small projects during university, I take immense pride in the variety and quality of the work I produce."
+currently-color: blue
 ---
 
 <div class="projects-container row">
     {% for project in site.categories.projects %}
 
-    <div class="project col-12 col-lg-6">
+    <div class="project col-12 col-md-6">
         <a href="{{ project.url | relative_url }}" class="project-inner">
             <div class="project-image">
-                <img src="{{ project.thumb }}">
+                <img src="{{ project.thumb }}" alt="Screnshot of {{project.title}}">
             </div>
             <div class="project-overlay">
                 <h4>{{project.title}}</h4>
                 <div class="project-desc">{{project.desc}}</div>
-                <div class="project-roles">{{project.roles}}</div>
+                <div class="project-roles">{% for role in project.roles %}{{role}}. {% endfor %}</div>
                 <p>Read more</p>
             </div>
         </a>
     </div>
-    
+
     {% endfor %}
 </div>
 
-TODO: Include sections for web, graphic design, UX etc
+{% include currently.html %}

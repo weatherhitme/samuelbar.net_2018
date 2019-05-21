@@ -1,11 +1,21 @@
-$color-blue: #009ee2;
-$color-blue-light: #d1f1ff;
-$color-blue-safe: #0072a3;
-$color-red: #e20613;
-$color-red-light: #ffd2d5;
-$color-red-safe: #b30510;
-$color-grey: #363639;
-$color-grey-light: #eeeeee;
+$var-colors: (
+	"blue": #009ee2,
+	"blue-light": #d1f1ff,
+	"blue-safe": #0072a3,
+	"red": #e20613,
+	"red-light": #ffd2d5,
+	"red-safe": #b30510,
+	"grey": #363639,
+	"grey-light": #eeeeee,
+    "grey-safe": #363639,
+    "white": #fff
+);
+
+@function color($color) {
+	@return map-get($var-colors, $color);
+}
+// Colors not defined as Sass $variables, instead stored in a Sass map (above)
+// Use the function color() get color values.
 
 $size-h1: 3.998rem;
 $size-h2: 2.827rem;
@@ -14,9 +24,8 @@ $size-h4: 1.414rem;
 $size-h5: 1.25rem;
 $size-h6: 1rem;
 
-$font-family--heading: 'Nexa', $font-family-base;
-$font-family: 'Open Sans', $font-family-base;
-
+$font-family--heading: "Nexa", $font-family-base;
+$font-family: "Open Sans", $font-family-base;
 
 $section-gap: 50px;
 $section-gap-small: 40px;

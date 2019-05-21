@@ -1,163 +1,177 @@
 @mixin box-shadow($color: null) {
-    box-shadow: 0 0 25px rgba(#000000, 0.25);
+	box-shadow: 0 0 25px rgba(#000000, 0.25);
 
-    @if $color !=null {
-        box-shadow: 0 0 25px rgba($color, 0.25);
-    }
+	@if $color !=null {
+		box-shadow: 0 0 25px rgba($color, 0.25);
+	}
 }
 
 @mixin box-shadow-faint {
-    box-shadow: 0 0 25px rgba(#000000, 0.15);
+	box-shadow: 0 0 25px rgba(#000000, 0.15);
 }
 
 @mixin box-shadow-close($color: null) {
-    box-shadow: 0 0 15px rgba(#000000, 0.25);
+	box-shadow: 0 0 15px rgba(#000000, 0.25);
 
-    @if $color !=null {
-        box-shadow: 0 0 15px rgba($color, 0.25);
-    }
+	@if $color !=null {
+		box-shadow: 0 0 15px rgba($color, 0.25);
+	}
 }
 
 @mixin box-shadow-far {
-    box-shadow: 0 0 40px rgba(#000000, 0.2);
+	box-shadow: 0 0 40px rgba(#000000, 0.2);
 }
 
 @mixin box-shadow-far-faint {
-    box-shadow: 0 0 40px rgba(#000000, 0.1);
+	box-shadow: 0 0 40px rgba(#000000, 0.1);
 }
 
 @mixin box-shadow-inset {
-    box-shadow: inset 0 0 25px rgba(#000000, 0.25);
+	box-shadow: inset 0 0 25px rgba(#000000, 0.25);
 }
 
 @mixin box-shadow-faint-inset {
-    box-shadow: inset 0 0 25px rgba(#000000, 0.15);
+	box-shadow: inset 0 0 25px rgba(#000000, 0.15);
 }
 
 @mixin box-shadow-close-faint-inset {
-    box-shadow: inset 0 0 15px rgba(#000000, 0.15);
+	box-shadow: inset 0 0 15px rgba(#000000, 0.15);
 }
 
 @mixin box-shadow-far-inset {
-    box-shadow: inset 0 0 40px rgba(#000000, 0.25);
+	box-shadow: inset 0 0 40px rgba(#000000, 0.25);
 }
 
 @mixin responsive-headings($br, $size, $scale) {
-
-    @include media-breakpoint-down($br) {
-        font-size: calc(#{$size} * #{$scale});
-    }
-
+	@include media-breakpoint-down($br) {
+		font-size: calc(#{$size} * #{$scale});
+	}
 }
 
 @mixin heading-setup {
-    margin: 1.414em 0 0.5em;
-    line-height: 1.2;
+	margin: 1.414em 0 0.5em;
+	line-height: 1.2;
+	font-family: $font-family--heading;
 
-    &:first-child {
-        margin-top: 0;
-    }
+	&:first-child {
+		margin-top: 0;
+	}
 
-    &:only-child {
-        margin: 0;
-    }
+	&:only-child {
+		margin: 0;
+	}
 }
 
 @mixin h1 {
-    $size: $size-h1;
-    font-size: $size;
-    @include heading-setup;
-    @include responsive-headings(md, $size, 0.9);
-    margin-top: 0;
-    font-family: $font-family--heading;
-    font-weight: 700;
+	$size: $size-h1;
+	font-size: $size;
+	@include heading-setup;
+	@include responsive-headings(md, $size, 0.9);
+	margin-top: 0;
+	font-family: $font-family--heading;
+	font-weight: 700;
 }
 
 @mixin h2 {
-    $size: $size-h2;
-    font-size: $size;
-    @include heading-setup;
-    @include responsive-headings(md, $size, 0.9);
-    font-weight: 700;
-    font-family: $font-family--heading;
+	$size: $size-h2;
+	font-size: $size;
+	@include heading-setup;
+	@include responsive-headings(md, $size, 0.9);
+	font-weight: 700;
+	font-family: $font-family--heading;
 }
 
 @mixin h3 {
-    $size: $size-h3;
-    font-size: $size;
-    @include heading-setup;
-    @include responsive-headings(md, $size, 0.9);
-    font-weight: 800;
+	$size: $size-h3;
+	font-size: $size;
+	@include heading-setup;
+	@include responsive-headings(md, $size, 0.9);
+	font-weight: 800;
 }
 
 @mixin h4 {
-    $size: $size-h4;
-    font-size: $size;
-    @include heading-setup;
-    @include responsive-headings(md, $size, 0.9);
-    font-weight: 700;
+	$size: $size-h4;
+	font-size: $size;
+	@include heading-setup;
+	@include responsive-headings(md, $size, 0.9);
+	font-weight: 700;
 }
 
 @mixin h5 {
-    $size: $size-h5;
-    font-size: $size;
-    @include heading-setup;
-    @include responsive-headings(md, $size, 0.9);
-    font-weight: 700;
+	$size: $size-h5;
+	font-size: $size;
+	@include heading-setup;
+	@include responsive-headings(md, $size, 0.9);
+	font-weight: 700;
 }
 
 @mixin h6 {
-    $size: $size-h6;
-    font-size: $size;
-    @include heading-setup;
-    @include responsive-headings(md, $size, 0.9);
-    font-weight: 700;
+	$size: $size-h6;
+	font-size: $size;
+	@include heading-setup;
+	@include responsive-headings(md, $size, 0.9);
+	font-weight: 700;
 }
 
 @mixin link($bg, $color) {
-    background-color: $bg;
-    border-radius: 0.1em;
-    color: $color;
-    box-sizing: content-box;
-    transition: color 0.1s, background-color 0.1s;
-    height: 1em;
-    display: inline-flex;
-    align-items: center;
+	background-color: $bg;
+	border-radius: 0.1em;
+	color: $color;
+	box-sizing: content-box;
+	transition: color 0.1s, background-color 0.1s;
+	height: 1em;
+	display: inline-flex;
+	align-items: center;
 
-    border-bottom: none;
-    text-decoration: none;
-    position: relative;
+	border-bottom: none;
+	text-decoration: none;
+	position: relative;
+}
+
+@mixin button($bg, $color) {
+    
+    @include box-shadow-close($bg);
+    background: $bg;
+    border: 3px solid $bg;
+    color: $color;
+
+    @include hover {
+        @include box-shadow($bg);
+        background: $color;
+        border: 3px solid $color;
+        color: $bg;
+    }
 }
 
 @mixin window-style {
-    border-radius: $radius-window;
-    // @include box-shadow-inset;
+	border-radius: $radius-window;
+	// @include box-shadow-inset;
 }
 
 @mixin window-style-absolute {
-    position: relative;
-    border-radius: $radius-window;
+	position: relative;
+	border-radius: $radius-window;
 
-    &::after {
-        content: '';
-        border-radius: $radius-window;
-        @include box-shadow-inset;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-    }
+	&::after {
+		content: "";
+		border-radius: $radius-window;
+		@include box-shadow-inset;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
 }
 
 @mixin hover {
-    &:hover,
-    &:focus {
-        @content;
-    }
+	&:hover,
+	&:focus {
+		@content;
+	}
 }
 
-@mixin bg-focus($position: middle, $important:null) {
+@mixin bg-focus($position: middle, $important: null) {
 	// top, right, bottom, left, middle
 
 	@if $position == middle {

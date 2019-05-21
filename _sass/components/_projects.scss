@@ -3,6 +3,13 @@
 	margin-bottom: -15px;
 }
 
+// body.user-is-tabbing {
+//     .project-overlay {
+// 		color: color("blue-light");
+// 		background: rgba(color("blue-safe"), 0.95);
+//     }
+// }
+
 .project {
 	margin: 15px 0;
 
@@ -13,10 +20,11 @@
 		overflow: hidden;
 		position: relative;
 		@include box-shadow-faint;
-		border: 10px solid #fff;
+		// border: 10px solid #fff;
 		transition: 0.3s ease;
 
 		@include hover-focus {
+			box-shadow: none;
 			.project-overlay {
 				// @include box-shadow-faint-inset;
 				opacity: 1;
@@ -25,7 +33,8 @@
 	}
 
 	&-image {
-		@include aspect-ratio(1.5, 1);
+		// @include aspect-ratio(2, 1);
+		@include aspect-ratio(16, 9);
 		@include aspect-focus(0%);
 		transition: 0.3s;
 
@@ -44,8 +53,8 @@
 		display: flex;
 		justify-content: center;
 		flex-direction: column;
-		color: $color-blue-safe;
-		background: rgba($color-blue-light, 0.95);
+		color: color("blue-safe");
+		background: rgba(color("blue-light"), 0.95);
 		opacity: 0;
 		padding: 20px;
 		box-shadow: none;
@@ -79,5 +88,27 @@
 
 	&-roles {
 		margin: 1em 0;
+	}
+
+	&-role-list {
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        ul {
+            padding-left: 1.1em;
+            margin: 0;
+            margin-bottom: 1em;
+        }
+
+		li {
+			// list-style: none;
+            // display: block;
+            font-size: 16px;
+            font-weight: 600;
+
+            + li {
+                margin-top: 0.25em;
+            }
+		}
 	}
 }
