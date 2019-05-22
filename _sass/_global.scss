@@ -101,6 +101,8 @@ small,
 
 main {
     margin: 30px 0;
+
+    min-height: calc(100vh - 2 * 30px - #{$height-nav} - #{$height-footer});
 }
 
 section:not(:first-child) {

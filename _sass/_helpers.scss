@@ -93,6 +93,9 @@
     .m-bottom-#{$margin}em {
         margin-bottom: #{$val}em;
     }
+    .m-top-#{$margin}em {
+        margin-top: #{$val}em;
+    }
 }
 
 @each $br, $px in $grid-breakpoints {

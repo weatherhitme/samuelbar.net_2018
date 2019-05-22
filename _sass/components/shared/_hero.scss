@@ -4,13 +4,24 @@
 	color: #fff;
 	text-align: center;
 	overflow: hidden;
-	width: 100%;
+    width: 100%;
+    flex-direction: column !important;
 
 	@include media-breakpoint-up(md) {
-		flex-direction: row;
+		flex-direction: row !important;
 		align-items: center;
 		justify-content: center;
-	}
+    }
+    
+    &.header {
+        .header-image {
+            max-width: 200px;
+
+            @include media-breakpoint-up(lg) {
+                margin-right: 2em;
+            }
+        }
+    }
 
 	&-text {
 		display: block;

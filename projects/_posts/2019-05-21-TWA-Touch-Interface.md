@@ -7,8 +7,8 @@ header-color: blue
 thumb: "/assets/images/content/TWA/TWA – 2-compressed.jpg"
 # banner-focus: top
 desc: "Wall-scale touchscreen experience."
-desc-long: "Human-scale touchscreen experience. 2.5 x 1.5 metres in size, users would collaborate on this wall-sized screen to create itineraries of Western Australian tourist attractions and destinations
-<a href='https://xd.adobe.com/embed/d896b2d0-4cc3-4c44-6d48-450832eb1ca9-aea7' title='Try the prototype' target='_blank' class='button solid-blue'>Try the prototype</a>"
+desc-long: "Human-scale touchscreen experience. 2.5 x 1.5 metres in size, users would collaborate on this wall-sized screen to create itineraries of Western Australian tourist attractions and destinations"
+header-link: "<a href='https://xd.adobe.com/view/721ab707-f931-41f4-7b2d-dd4ad680ab72-042b/' title='Try the prototype' target='_blank' class='button solid-blue'>Try the Prototype</a>"
 roles: [
     User Experience Design,
     Wireframing,
@@ -17,7 +17,7 @@ roles: [
 ---
 <img alt="Final mockup" src="/assets/images/content/TWA/TWA – 2 (1).png">
 
-The Western Australian Visitor Centre were looking to create an engaging and collaborative experience for tourists visiting the centre to find local attractions and destinations. Currently, the staff were having to recommend and direct visitors to specific attractions in one-to-one interactions. They would also write out physical itineraries for visitors by request - a labour and time intensive process.
+The <a class="link link-blue" href="https://www.wavisitorcentre.com.au/" title="Visit Western Australian Visitor Centre Website">Western Australian Visitor Centre</a> were looking to create an engaging and collaborative experience for tourists visiting the centre to find local attractions and destinations. Currently, the staff were having to recommend and direct visitors to specific attractions in one-to-one interactions. They would also write out physical itineraries for visitors by request - a labour and time intensive process.
 
 They came to us having ordered an enormous wall-scale touchscreen - two-and-a-half metres wide - with a single requirement: a single page that links to existing Tourism WA assets. A simple goal, but working with such an unfamiliar scale, I got excited. I wanted to create something a little more useful and interactive.
 

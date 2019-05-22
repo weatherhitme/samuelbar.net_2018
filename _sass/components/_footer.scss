@@ -1,0 +1,42 @@
+footer.footer {
+	height: $height-footer;
+	@include box-shadow-far;
+	background: #fff;
+
+	&,
+	.container {
+		display: flex;
+		align-items: center;
+
+		> * {
+			display: flex;
+			align-items: center;
+			flex: 1 0;
+		}
+	}
+
+	.footer-left {
+		justify-content: flex-start;
+	}
+
+	.footer-center {
+		justify-content: center;
+	}
+
+	.footer-right {
+		justify-content: flex-end;
+	}
+
+	.copyright {
+		font-size: 14px;
+		font-weight: 700;
+		color: color("grey");
+		text-align: center;
+
+		> span {
+			color: color("grey");
+			font-weight: 600;
+			margin-left: 1em;
+		}
+	}
+}

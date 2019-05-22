@@ -1,5 +1,5 @@
 header.navbar {
-	height: 120px;
+	height: $height-nav;
 	@include box-shadow-far;
 
 	&,
@@ -50,6 +50,10 @@ header.navbar {
 	}
 
 	.logo {
-		mix-blend-mode: multiply;
+        height: 50px;
+        @include media-breakpoint-up(md) {
+            height: 80px;
+        }
+		// mix-blend-mode: multiply;
 	}
 }
