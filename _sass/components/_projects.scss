@@ -91,32 +91,53 @@
 	}
 
 	&-role-list {
-        justify-content: flex-start;
-        align-items: flex-start;
+		justify-content: flex-start;
+		align-items: flex-start;
+		padding: 1.5em;
 
-        ul {
-            padding-left: 1.1em;
-            margin: 0;
-            margin-bottom: 1em;
-        }
+		ul {
+			padding-left: 1.1em;
+			margin: 0;
+			margin-bottom: 1em;
+		}
 
 		li {
 			// list-style: none;
-            // display: block;
-            font-size: 16px;
-            font-weight: 600;
+			// display: block;
+			font-size: 16px;
+			font-weight: 600;
 
-            + li {
-                margin-top: 0.25em;
-            }
+			+ li {
+				margin-top: 0.25em;
+			}
 		}
-    }
-    
-    &-content {
-         p {
-            @include make-col-ready();
-            @include make-col(12);
-        }
-    }
+	}
 
+	&-content {
+		margin-top: $section-gap-small;
+		@include media-breakpoint-up(lg) {
+			margin-top: 0;
+		}
+
+		p {
+			margin-top: 0;
+
+			&.row {
+				padding-left: 15px;
+				padding-right: 15px;
+
+				> * {
+					margin-top: 15px;
+				}
+				margin-top: -15px;
+			}
+			&:not(.row) {
+				@include make-col-ready();
+				@include make-col(12);
+			}
+		}
+		img {
+			border-radius: 10px;
+		}
+	}
 }

@@ -3,8 +3,8 @@ layout: project
 permalink: "projects/wa-industrylink"
 title: WA Industry Link
 client: Dept. of Jobs, Tourism, Science and Innovation
-thumb: "/assets/images/projects/WA IndustryLink/industrylink.wa.gov.au_ (1)-compressed.jpg"
-banner: "/assets/images/projects/WA IndustryLink/industrylink.wa.gov.au_ (1)-compressed.jpg"
+thumb: "/assets/images/content/WA IndustryLink/industrylink.wa.gov.au_ (1)-compressed.jpg"
+banner: "/assets/images/content/WA IndustryLink/industrylink.wa.gov.au_ (1)-compressed.jpg"
 desc: "State government project website."
 roles: [
     User Experience Design,
