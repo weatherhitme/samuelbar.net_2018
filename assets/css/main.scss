@@ -11,10 +11,11 @@
 @import 'vendor/bootstrap/grid';
 
 
-@import 'util/variables';
-@import 'util/aspect';
-@import 'util/mixins';
-@import 'util/helpers';
+@import 'variables';
+@import 'aspect';
+@import 'mixins';
+@import 'helpers';
+@import 'global';
 
 @import 'components/shared/banner';
 @import 'components/shared/button';
@@ -27,5 +28,4 @@
 @import 'components/currently';
 @import 'components/services';
 @import 'components/projects';
-@import 'base/global';
-@import 'base/navigation';
+@import 'components/navigation';

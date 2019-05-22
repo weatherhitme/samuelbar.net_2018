@@ -18,10 +18,10 @@ The Western Australian Visitor Centre were looking to create an engaging and col
 
 They came to us having ordered an enormous wall-scale touchscreen - two-and-a-half metres wide - with a single requirement: a single page that links to existing Tourism WA assets. A simple goal, but working with such an unfamiliar scale, I got excited. I wanted to create something a little more useful and interactive.
 
-I immediately got to work on a paper scale of the approximate size of the screen
+I immediately got to work on a paper scale of the approximate size of the screen.
 
-As the sole designer on the project, generated User Experience Designs for a 2.5m x 1.5m touch screen to be installed in the Western Australia Visitor Centre.
-
-During wireframing process, created life-scale physical prototype to design for ideal real-world ergonomics and measurements.
+{:.row}
+<span class="col-6"><img alt="Mockup with average human metrics overlaid" src="/assets/images/projects/TWA/TWA (1).png"></span>
+<span class="col-6"><img alt="Mockup with average human metrics overlaid" src="/assets/images/projects/TWA/TWA (1).png"></span>
 
 ![{{page.title}} screenshot](/assets/images/projects/TWA/TWA (1).png)
