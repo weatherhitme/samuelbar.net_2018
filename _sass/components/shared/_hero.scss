@@ -1,27 +1,17 @@
 .hero {
 	background-color: color("grey");
-	min-height: 300px;
 	color: #fff;
+	min-height: 300px;
 	text-align: center;
 	overflow: hidden;
-    width: 100%;
-    flex-direction: column !important;
+	width: 100%;
+	flex-direction: column !important;
 
 	@include media-breakpoint-up(md) {
 		flex-direction: row !important;
 		align-items: center;
 		justify-content: center;
-    }
-    
-    &.header {
-        .header-image {
-            max-width: 200px;
-
-            @include media-breakpoint-up(lg) {
-                margin-right: 2em;
-            }
-        }
-    }
+	}
 
 	&-text {
 		display: block;
@@ -31,8 +21,8 @@
 		line-height: 1.2;
 		user-select: none;
 		overflow: hidden;
-        margin-bottom: 0.5em;
-        z-index: 1;
+		margin-bottom: 0.5em;
+		z-index: 1;
 
 		@include h2;
 
@@ -57,17 +47,17 @@
 			top: 0.05em;
 			right: 0.05em;
 			width: 100%;
-            color: color("red");
-            z-index: -1;
+			color: color("red");
+			z-index: -1;
 		}
 
 		&-blue {
 			position: absolute;
 			top: -0.05em;
 			right: -0.05em;
-            width: 100%;
-            color: color("blue");
-            z-index: -1;
+			width: 100%;
+			color: color("blue");
+			z-index: -1;
 		}
 	}
 

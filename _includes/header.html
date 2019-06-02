@@ -1,17 +1,21 @@
 <!-- start header.html -->
 <section class='window-container container'>
-    <div class='hero header window bg-{{page.header-color}}-light text-{{page.header-color}}-safe'>
+    <div class='header window bg-{{page.header-color}}-light text-{{page.header-color}}-safe'>
 
         {% if page.header-image %}
         <div class="header-image col-md-3 col-lg-3 text-left">
-            <img src="{{'page.header-image | relative_url}}" alt="Portrait photo of Sam Barnett" class="about-image">
+            <img src="{{ page.header-image | relative_url }}" alt="Portrait photo of Sam Barnett" class="about-image">
         </div>
         <div class="col-11 col-sm-10 col-md-8 text-left">
             {% else %}
             <div class="col-11 col-sm-10 text-left">
                 {% endif %}
 
-                <h2>{{ page.title }}</h2>
+                <h2 class="{% if page.client %}title-with-subtitle{% endif %}">{{ page.title }}</h2>
+
+                {% if page.client %}
+                <span class='project-client'>{{ page.client }}</span>
+                {% endif %}
 
                 {% if page.desc-long %}
                 <p>{{ page.desc-long }}</p>

@@ -1,0 +1,28 @@
+.header {
+	background-color: color("grey");
+	color: #fff;
+	min-height: 350px;
+	flex-direction: column !important;
+
+	@include media-breakpoint-up(md) {
+		flex-direction: row !important;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&-image {
+		max-width: 200px;
+
+		@include media-breakpoint-up(lg) {
+			margin-right: 2em;
+		}
+	}
+
+	h2.title-with-subtitle {
+		margin-bottom: -0.15em;
+
+		+ .project-client {
+			margin-bottom: 0.5em;
+		}
+	}
+}
