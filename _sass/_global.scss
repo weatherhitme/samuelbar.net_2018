@@ -1,142 +1,139 @@
 @font-face {
-    font-family: 'Nexa';
-    font-style: normal;
-    font-weight: 700;
-    src: local('Nexa Black'),
-        url('../fonts/nexa-black-webfont.woff2') format('woff2'),
-        url('../fonts/nexa-black-webfont.woff') format('woff'),
-        url('../fonts/nexa-black-webfont.ttf') format('truetype'),
-        url('../fonts/nexa-black-webfont.eot') format('embedded-opentype')
+	font-family: "Nexa";
+	font-style: normal;
+	font-weight: 700;
+	src: local("Nexa Black"), url("../fonts/nexa-black-webfont.woff2") format("woff2"),
+		url("../fonts/nexa-black-webfont.woff") format("woff"),
+		url("../fonts/nexa-black-webfont.ttf") format("truetype"),
+		url("../fonts/nexa-black-webfont.eot") format("embedded-opentype");
 }
 html {
-    box-sizing: border-box;
-    font-size: 18px;
+	box-sizing: border-box;
+	font-size: 18px;
 }
 
 *,
 ::before,
 ::after {
-    box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 html,
 body {
-    overflow-x: hidden;
+	overflow-x: hidden;
 }
 
-
 body {
-    font-family: $font-family;
-    font-weight: 400;
-    line-height: 1.45;
-    color: color("grey");
+	font-family: $font-family;
+	font-weight: 400;
+	line-height: 1.45;
+	color: color("grey");
 
-    &.user-is-tabbing *:focus {
-        outline: dotted 2px color("blue-safe");
-        outline-offset: 3px;
-    }
+	&.user-is-tabbing *:focus {
+		outline: dotted 2px color("blue-safe");
+		outline-offset: 3px;
+	}
 
-    &:not(.user-is-tabbing) {
-
-        .card,
-        button,
-        select {
-            &:focus {
-                outline: none;
-            }
-        }
-
-    }
+	&:not(.user-is-tabbing) {
+		.card,
+		button,
+		select {
+			&:focus {
+				outline: none;
+			}
+		}
+	}
 }
 
 main img {
-    max-width: 100%;
+	max-width: 100%;
 }
 
 p {
-    font-weight: 400;
-    margin-bottom: 1.3em;
+	font-weight: 400;
+	margin-bottom: 1.3em;
 
-    &:first-child {
-        margin-top: 0;
-    }
+	&:first-child {
+		margin-top: 0;
+	}
 
-    &:last-child {
-        margin-bottom: 0;
-    }
+	&:last-child {
+		margin-bottom: 0;
+	}
 }
 
 strong {
-    font-weight: 800;
+	font-weight: 800;
 }
 
 h1 {
-    @include h1;
+	@include h1;
 }
 
 h2 {
-    @include h2;
+	@include h2;
 }
 
 h3 {
-    @include h3;
+	@include h3;
 }
 
 h4 {
-    @include h4;
+	@include h4;
 }
 
 h5 {
-    @include h5;
+	@include h5;
 }
 
 h6 {
-    @include h6;
+	@include h6;
 }
 
 small,
 .font_small {
-    font-size: 0.707rem;
+	font-size: 0.707rem;
 }
 
 main {
-    margin: 30px 0;
+	margin: 30px 0;
 
-    min-height: calc(100vh - 2 * 30px - #{$height-nav} - #{$height-footer});
+	min-height: calc(100vh - 2 * 30px - #{$height-nav} - #{$height-footer});
 }
 
-section:not(:first-child) {
-    margin-top: $section-gap-small;
+section,
+.section {
+	&:not(:first-child) {
+		margin-top: $section-gap-small;
 
-    @include media-breakpoint-up(md) {
-        margin-top: $section-gap;
-    }
+		@include media-breakpoint-up(md) {
+			margin-top: $section-gap;
+		}
+	}
 }
-
-
 
 // Slick flicker fix
 .slick-slide,
 .slick-slider .slick-track,
 .slick-slider .slick-list {
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    -o-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+	-o-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
 
-    -webkit-transform: translateZ(0);
-    -moz-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    -o-transform: translateZ(0);
-    transform: translateZ(0);
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
 
-    -webkit-perspective: 1000;
-    -moz-perspective: 1000;
-    -ms-perspective: 1000;
-    perspective: 1000;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    backface-visibility: hidden;
+	-webkit-perspective: 1000;
+	-moz-perspective: 1000;
+	-ms-perspective: 1000;
+	perspective: 1000;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
 }

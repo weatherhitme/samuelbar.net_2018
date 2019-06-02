@@ -10,7 +10,7 @@
                 <a href="{{ site.url | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">Home</a>
             </li>
 
-            {% assign sorted_pages = site.pages | sort:"order"  %}
+            {% assign sorted_pages = site.pages | sort:"order" | where: "publish", "true"  %}
             {% for node in sorted_pages %}
             {% if node.title %}
             <li class=" ">

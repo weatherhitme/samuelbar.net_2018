@@ -1,24 +1,60 @@
 ---
 layout: page
+publish: true
 permalink: "/about/"
 title: About me
 header-color: blue
 order: 1
 desc: "I'm a front-end developer and user experience designer based in Perth, WA. I bring designs through from pen-and-pad sketches to fully functioning web experiences that people love to use."
 header-image: "/assets/images/Portrait.png"
+icons:
+    - name: Adobe Creative Cloud
+      src: /assets/images/icons/icon-adobe.svg
+      href: https://www.adobe.com/au/creativecloud.html/
+    - name: HTML5
+      src: /assets/images/icons/icon-html.svg
+      href: https://developer.mozilla.org/en-US/docs/Web/html/
+    - name: CSS3
+      src: /assets/images/icons/icon-css.svg
+      href: https://developer.mozilla.org/en-US/docs/Web/css/
+    - name: Sass
+      src: /assets/images/icons/icon-sass.svg
+      href: https://sass-lang.com/
+    - name: Javascript
+      src: /assets/images/icons/icon-js.svg
+      href: https://developer.mozilla.org/en-US/docs/Web/javascript/
+    - name: Angular
+      src: /assets/images/icons/icon-angular.svg
+      href: https://www.angular.io/
+    - name: Git
+      src: /assets/images/icons/icon-git.svg
+      href: https://git-scm.com/
 ---
-
-
-
-<!-- An eager and detail-attentive designer and developer with an interest in new technologies and engaging projects that allow for cross-over between design and web development. I usually work within the realms of User Experience, Front-end Web Development and Brand Identity. -->
 
 <div class="about-container row">
 
-    <div class="col-8 col-lg-3">
-        <img src="/" alt="Portrait photo of Sam Barnett" class="about-image">
+    <div class="col-12 section">
+        <h3>Go on...</h3>
+        <p>
+            I've spent the last couple of years working as the UX Designer/Developer at <a class="link link-{{page.header-color}}" href="http://www.diversus.com.au" target="_blank">Diversus</a> - a software consultancy based in West Perth. Typically I'm brought in to provide end-to-end UX and front-end development work, but I'm also often tasked with prettying-up developers' work.
+        </p>
+        <p>
+            I've been given amazing opportunities to work with big-name clients, such as Optus Stadium and Tourism WA, as well as several state government agencies. I take immense pride in having made a positive impact and impression with these clients.
+        </p>
+        <p>
+            When I'm not working, I love indoor bouldering (rock climbing), playing video games, and pretending I don't have personal projects I should be working on instead.
+        </p>
+        
     </div>
-    <div class="col-12 col-lg-9">
 
+    <div class="about-icons section col-12">
+        <h5 class="icons-heading text-uppercase">Software Skills</h5>
+        {% for icon in page.icons %}
+        <a href="{{icon.href}}" target="_blank"
+        title="Learn more about {{icon.name}}">
+        <img src="{{ icon.src | relative_url }}"
+        alt="{{icon.name}} Logo" height="100"></a>
+        {% endfor %}
     </div>
 
 </div>

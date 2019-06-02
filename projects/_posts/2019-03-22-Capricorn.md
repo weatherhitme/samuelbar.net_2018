@@ -1,12 +1,12 @@
 ---
 layout: project
 permalink: "projects/capricorn"
-title: Insurance Quoting Tool
+title: In-Field Quoting Tool
 client: Capricorn Risk Services
 header-color: blue
 thumb: "/assets/images/content/Capricorn/Quote.png"
 # banner-focus: top
-desc: "Insurance quoting tool"
+desc: "Insurance quoting Angular application"
 desc-long: "Insurance quoting web app to replace previous paper processes. Built to work in remote and low-coverage rural areas across Australia and New Zealand."
 header-link: "<a href='https://xd.adobe.com/view/1a5ac5ec-7c8b-4905-6913-2ebb41195840-6c6b/' title='Try the prototype' target='_blank' class='button solid-white-blue'>Try the Prototype</a>"
 roles: [
