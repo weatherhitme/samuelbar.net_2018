@@ -6,11 +6,8 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Sam Barnett | UX Developer
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+title: Sam Barnett | Perth UX Developer
+description: "A Front-end Developer and User Experience Designer based in Perth, WA. I love to bring designs through from pen-and-pad sketches to fully functioning web experiences that people love to use."
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://samuelbar.net" # the base hostname & protocol for your site
 
