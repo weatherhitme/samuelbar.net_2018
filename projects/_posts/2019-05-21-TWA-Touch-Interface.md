@@ -8,11 +8,11 @@ thumb: "/assets/images/content/TWA/TWA – 2-compressed.jpg"
 # banner-focus: top
 desc: "Wall-scale touchscreen experience."
 desc-long: "Human-scale touchscreen experience. 2.5 x 1.5 metres in size, users would collaborate on this wall-sized screen to create itineraries of Western Australian tourist attractions and destinations"
-header-link: "<a href='https://xd.adobe.com/view/721ab707-f931-41f4-7b2d-dd4ad680ab72-042b/' title='Try the prototype' target='_blank' class='button solid-blue'>Try the Prototype</a>"
+header-link: "<a href='https://xd.adobe.com/view/721ab707-f931-41f4-7b2d-dd4ad680ab72-042b/' title='Try the prototype' target='_blank' class='button solid-white-blue'>Try the Prototype</a>"
 roles: [
     User Experience Design,
     Wireframing,
-    Interactive Prototyping
+    Physical Prototyping
 ]
 ---
 <img alt="Final mockup" src="/assets/images/content/TWA/TWA – 2 (1).png">
