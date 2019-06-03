@@ -4,7 +4,7 @@ permalink: "projects/twa-touch-interface"
 title: Tourism WA Touch Interface
 client: Tourism WA
 header-color: blue
-thumb: "/assets/images/content/TWA/TWA – 2-compressed.jpg"
+thumb: "/assets/images/content/TWA/TWA-mockup.jpg"
 # banner-focus: top
 desc: "Wall-scale touchscreen experience."
 desc-long: "Human-scale touchscreen experience. 2.5 x 1.5 metres in size, users would collaborate on this wall-sized screen to create itineraries of Western Australian tourist attractions and destinations"
@@ -15,7 +15,7 @@ roles: [
     Physical Prototyping
 ]
 ---
-<img alt="Final mockup" src="/assets/images/content/TWA/TWA – 2 (1).png">
+<img alt="Final mockup" src="/assets/images/content/TWA/TWA-wireframe.png">
 
 The <a class="link link-blue" href="https://www.wavisitorcentre.com.au/" title="Visit Western Australian Visitor Centre Website">Western Australian Visitor Centre</a> were looking to create an engaging and collaborative experience for tourists visiting the centre to find local attractions and destinations. Currently, the staff were having to recommend and direct visitors to specific attractions in one-to-one interactions. They would also write out physical itineraries for visitors by request - a labour and time intensive process.
 
