@@ -1,7 +1,7 @@
 footer.footer {
 	height: $height-footer;
 	@include box-shadow-far;
-	background: #fff;
+	background: color("white");
 
 	&,
 	.container {

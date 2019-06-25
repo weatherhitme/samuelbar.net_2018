@@ -23,7 +23,7 @@
 				@include box-shadow(color("blue"));
 				background: color("blue");
 				border: 3px solid color("blue");
-				color: #fff;
+				color: color("white");
 			}
 		}
 
@@ -37,40 +37,40 @@
 				@include box-shadow(color("red"));
 				background: color("red");
 				border: 3px solid color("red");
-				color: #fff;
+				color: color("white");
 			}
 		}
 
 		&-white {
 			&-blue {
 				@include box-shadow-close(color("blue"));
-				background: #fff;
-				border: 3px solid #fff;
+				background: color("white");
+				border: 3px solid color("white");
 				color: color("blue-safe");
 
 				@include hover {
 					@include box-shadow(color("blue-safe"));
 					background: color("blue");
 					border: 3px solid color("blue");
-					color: #fff;
+					color: color("white");
 				}
 			}
 			&-red {
 				@include box-shadow-close(color("red"));
-				background: #fff;
-				border: 3px solid #fff;
+				background: color("white");
+				border: 3px solid color("white");
 				color: color("red-safe");
 
 				@include hover {
 					@include box-shadow(color("red-safe"));
 					background: color("red");
 					border: 3px solid color("red");
-					color: #fff;
+					color: color("white");
 				}
 			}
 
 			&-grey {
-				@include button(#fff, color("grey"));
+				@include button(color("white"), color("grey"));
 			}
 		}
 	}
@@ -85,7 +85,7 @@
 			@include hover {
 				@include box-shadow(color("blue"));
 				background: color("blue-safe");
-				color: #fff;
+				color: color("white");
 			}
 		}
 
@@ -98,7 +98,7 @@
 			@include hover {
 				@include box-shadow(color("red"));
 				background: color("red-safe");
-				color: #fff;
+				color: color("white");
 			}
 		}
 	}
