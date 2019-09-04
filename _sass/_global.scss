@@ -27,7 +27,13 @@ body {
 	font-family: $font-family;
 	font-weight: 400;
 	line-height: 1.45;
-	color: color("grey");
+    color: color("grey");
+    
+    margin-top: $height-nav-mobile;
+
+    @include media-breakpoint-up($bp-tablet) {
+        margin-top: 0;
+    }
 
 	&.user-is-tabbing *:focus {
 		outline: dotted 2px color("blue-safe");
@@ -106,7 +112,7 @@ section,
 	&:not(:first-child) {
 		margin-top: $section-gap-small;
 
-		@include media-breakpoint-up(md) {
+		@include media-breakpoint-up($bp-mobile) {
 			margin-top: $section-gap;
 		}
 	}

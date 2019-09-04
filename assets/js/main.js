@@ -78,6 +78,10 @@ $(document).ready(function () {
             $this.removeClass("tappable")
         }
     })
+
+    $('.nav-button').click(function() {
+        $('.nav-button, .navbar ul').toggleClass('expanded');
+    })
 });
 
 function tabbingBehaviour() {
