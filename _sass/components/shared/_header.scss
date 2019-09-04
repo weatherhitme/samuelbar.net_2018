@@ -4,7 +4,7 @@
 	min-height: 350px;
 	flex-direction: column !important;
 
-	@include media-breakpoint-up(md) {
+	@include media-breakpoint-up($bp-mobile) {
 		flex-direction: row !important;
 		align-items: center;
 		justify-content: center;

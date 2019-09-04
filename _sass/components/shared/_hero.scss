@@ -99,8 +99,10 @@
 	}
 
 	.hero-desc {
+        margin-top: 1.5em;
 		@include media-breakpoint-up(md) {
-			text-align: left;
+            margin-top: 0;
+            text-align: left;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
