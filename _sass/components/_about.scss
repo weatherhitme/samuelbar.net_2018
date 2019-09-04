@@ -27,7 +27,7 @@
 		img {
 			height: 50px;
 
-			@include media-breakpoint-up(md) {
+			@include media-breakpoint-up($bp-mobile) {
 				height: 60px;
 			}
 			@include media-breakpoint-up(lg) {

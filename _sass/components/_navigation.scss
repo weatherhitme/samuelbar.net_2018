@@ -1,28 +1,40 @@
 header.navbar {
-	height: $height-nav;
-	@include box-shadow-far;
+	height: $height-nav-mobile;
+    @include box-shadow-far;
+    position: fixed;
+    top: 0;
+    background: color('white');
+    z-index: $zindex-fixed;
 
+	@include media-breakpoint-up($bp-mobile) {
+        height: $height-nav;
+        position: static;
+		h1 {
+			font-size: $size-h5;
+		}
+    }
+    
 	&,
 	nav {
 		display: flex;
 		align-items: center;
-    }
-    
-    h1 {
-        font-size: $size-h5;
-        margin: 0;
-        margin-left: 1em;
-        user-select: none;
-        pointer-events: none;
+	}
 
-        @include media-breakpoint-up(md) {
-            font-size: $size-h4;
-        }
-    }
+	h1 {
+		font-size: $size-h6;
+		margin: 0;
+		margin-left: 1em;
+		user-select: none;
+		pointer-events: none;
+
+		@include media-breakpoint-up($bp-mobile) {
+			font-size: $size-h4;
+		}
+	}
 
 	nav {
 		ul {
-            margin-left: auto;
+			margin-left: auto;
 			li {
 				list-style: none;
 				display: inline-block;
@@ -31,29 +43,29 @@ header.navbar {
 				margin-left: 2em;
 
 				a {
-                    text-decoration: none;
-                    font-family: $font-family--heading;
-                    color: color("grey");
-                    transition: 0.3s ease;
+					text-decoration: none;
+					font-family: $font-family--heading;
+					color: color("grey");
+					transition: 0.3s ease;
 
 					@include hover-focus {
 						color: color("red-safe");
 						text-decoration: underline;
-                    }
-                    
-                    &.active {
-                        color: color("blue-safe");
-                    }
+					}
+
+					&.active {
+						color: color("blue-safe");
+					}
 				}
 			}
 		}
-	}
+    }
 
 	.logo {
-        height: 50px;
-        @include media-breakpoint-up(md) {
-            height: 80px;
-        }
+		height: 50px;
+		@include media-breakpoint-up($bp-mobile) {
+			height: 80px;
+		}
 		// mix-blend-mode: multiply;
 	}
 }

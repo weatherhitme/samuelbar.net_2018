@@ -25,6 +25,7 @@ $size-h5: 1.25rem;
 $size-h6: 1rem;
 
 $height-nav: 120px;
+$height-nav-mobile: 80px;
 $height-footer: 80px;
 
 $font-family--heading: "Nexa", $font-family-base;
@@ -35,3 +36,6 @@ $section-gap-small: 40px;
 
 $radius-button: 5px;
 $radius-window: 15px;
+
+$bp-mobile: "sm";
+$bp-tablet: "md";
