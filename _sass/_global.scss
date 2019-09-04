@@ -31,7 +31,7 @@ body {
     
     margin-top: $height-nav-mobile;
 
-    @include media-breakpoint-up($bp-mobile) {
+    @include media-breakpoint-up($bp-tablet) {
         margin-top: 0;
     }
 

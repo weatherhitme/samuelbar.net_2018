@@ -1,24 +1,58 @@
 header.navbar {
 	height: $height-nav-mobile;
-    @include box-shadow-far;
-    position: fixed;
-    top: 0;
-    background: color('white');
-    z-index: $zindex-fixed;
+	@include box-shadow-far;
+	position: fixed;
+	top: 0;
+	background: color("white");
+	z-index: $zindex-fixed;
 
-	@include media-breakpoint-up($bp-mobile) {
-        height: $height-nav;
-        position: static;
+	@include media-breakpoint-up($bp-tablet) {
+		height: $height-nav;
+		position: static;
 		h1 {
 			font-size: $size-h5;
 		}
-    }
-    
+	}
+
 	&,
 	nav {
 		display: flex;
 		align-items: center;
-	}
+		width: 100%;
+    }
+    
+    .nav-button {
+        $button-size: 30px;
+        display: inline-block;
+        width: $button-size*1.1;
+        height: $button-size;
+        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: 0.3s ease;
+
+        &-bar {
+            $bar-height: 5px;
+            background: color('grey');
+            height: $bar-height;
+            width: 100%;
+            display: inline-block;
+            border-radius: $bar-height;
+            transition: 0.3s ease;
+        }
+
+        &.expanded {
+            transform: rotate(-90deg);
+            .nav-button-bar {
+                background: color('red');
+            }
+        }
+
+        @include media-breakpoint-up($bp-tablet) {
+            display: none;
+        }
+    }
 
 	h1 {
 		font-size: $size-h6;
@@ -27,20 +61,22 @@ header.navbar {
 		user-select: none;
 		pointer-events: none;
 
-		@include media-breakpoint-up($bp-mobile) {
+		@include media-breakpoint-up($bp-tablet) {
 			font-size: $size-h4;
 		}
 	}
 
 	nav {
+		height: $height-nav-mobile;
+		@include media-breakpoint-up($bp-tablet) {
+			height: auto;
+		}
 		ul {
-			margin-left: auto;
 			li {
 				list-style: none;
 				display: inline-block;
 				font-weight: 700;
 				text-transform: uppercase;
-				margin-left: 2em;
 
 				a {
 					text-decoration: none;
@@ -58,12 +94,61 @@ header.navbar {
 					}
 				}
 			}
+
+			@include media-breakpoint-up($bp-tablet) {
+				margin-left: auto;
+
+				li {
+					margin-left: 2em;
+				}
+			}
+
+			@include media-breakpoint-down($bp-mobile) {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100vw;
+				margin: 0;
+				background: rgba(color("white"), 0.95);
+				display: flex;
+				flex-direction: column;
+				z-index: -2;
+				text-align: center;
+				font-size: $size-h4;
+				padding: calc(#{$height-nav-mobile} + 2em) 1em 2em;
+				@include box-shadow-far;
+				transform: translateY(-100%);
+				transition: transform 0.3s ease;
+
+				&.expanded {
+					transform: translateY(0);
+				}
+
+				li {
+					+ li {
+						margin-top: 1.5em;
+					}
+				}
+			}
 		}
-    }
+		@include media-breakpoint-down($bp-mobile) {
+            &::before {
+                content: '';
+                background: color('white');
+                z-index: -1;
+                display: inline-block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+            }
+		}
+	}
 
 	.logo {
 		height: 50px;
-		@include media-breakpoint-up($bp-mobile) {
+		@include media-breakpoint-up($bp-tablet) {
 			height: 80px;
 		}
 		// mix-blend-mode: multiply;

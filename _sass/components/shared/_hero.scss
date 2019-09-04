@@ -7,7 +7,7 @@
 	width: 100%;
 	flex-direction: column !important;
 
-	@include media-breakpoint-up($bp-mobile) {
+	@include media-breakpoint-up(md) {
 		flex-direction: row !important;
 		align-items: center;
 		justify-content: center;
@@ -30,7 +30,7 @@
 		@include responsive-headings(md, $size-h2, 0.75);
 		@include responsive-headings(sm, $size-h3, 0.8);
 
-		@include media-breakpoint-up($bp-mobile) {
+		@include media-breakpoint-up(md) {
 			margin: 0;
 		}
 
@@ -84,7 +84,7 @@
 			}
 		}
 
-		@include media-breakpoint-up($bp-mobile) {
+		@include media-breakpoint-up(md) {
 			align-self: stretch;
 			align-items: center;
 			display: flex;
@@ -99,8 +99,10 @@
 	}
 
 	.hero-desc {
-		@include media-breakpoint-up($bp-mobile) {
-			text-align: left;
+        margin-top: 1.5em;
+		@include media-breakpoint-up(md) {
+            margin-top: 0;
+            text-align: left;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;

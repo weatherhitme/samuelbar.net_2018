@@ -5,7 +5,13 @@
 
     <title>{% if page.title %}{{ page.title | escape }} | Sam Barnett, Perth UX Developer{% else %}{{ site.title |
         escape }}{% endif %}</title>
-    <meta name="description" content="{{ page.desc | default: site.description
+    {% if page.desc-long %}
+        {% assign desc = page.desc-long %}
+    {% else %}
+        {% assign desc = page.desc %}
+    {% endif %}
+
+    <meta name="description" content="{{ desc | default: site.description
     | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
