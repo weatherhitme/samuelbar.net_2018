@@ -40,11 +40,12 @@
 		in (
 			"blue": $color--blue,
 			"blue-light": $color--blue-light,
-			"blue--safe": $color--blue-safe,
+			"blue-safe": $color--blue-safe,
 			"red": $color--red,
 			"red-light": $color--red-light,
 			"red-safe": $color--red-safe,
 			"grey": $color--grey,
+			"grey-medium": $color--grey-medium,
 			"grey-light": $color--grey-light,
 			"grey-safe": $color--grey-safe,
 			"white": $color--white
@@ -54,13 +55,27 @@
 		&-#{$color} {
 			color: $val !important;
 		}
-	}
+    }
 
 	.bg {
 		&-#{$color} {
 			background-color: $val !important;
 		}
 	}
+
+    @include dark-mode {
+        .dark-text {
+            &-#{$color} {
+                color: $val !important;
+            }
+        }
+
+        .dark-bg {
+            &-#{$color} {
+                background-color: $val !important;
+            }
+        }
+    }
 }
 
 .text-uppercase {

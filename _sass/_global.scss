@@ -51,6 +51,11 @@ body {
 	}
 }
 
+@include dark-mode {
+    background: $color--grey;
+    color: $color--white;
+}
+
 main img {
 	max-width: 100%;
 }

@@ -3,13 +3,6 @@
 	margin-bottom: -15px;
 }
 
-// body.user-is-tabbing {
-//     .project-overlay {
-// 		color: $color--blue-light;
-// 		background: rgba($color--blue-safe, 0.95);
-//     }
-// }
-
 .project {
 	margin: 15px 0;
 
@@ -80,11 +73,6 @@
 		}
 	}
 
-	&-desc {
-		font-weight: 600;
-		margin-top: -0.5em;
-    }
-
     &-client {
         // position: absolute;
         // top: 25px;
@@ -92,12 +80,17 @@
         color: $color--blue-safe;
         font-size: 14px;
         opacity: 0.5;
+		margin-top: -0.5em;
         display: inline-block;
         font-weight: 700;
     }
 
-	&-roles {
+	&-desc {
+		font-weight: 600;
 		margin: 1em 0;
+    }
+
+	&-roles {
 	}
 
 	&-role-list {
@@ -151,4 +144,17 @@
 			border-radius: 10px;
 		}
 	}
+}
+
+@include dark-mode {
+    .project {
+        &-overlay {
+            color: $color--blue-light;
+            background: rgba($color--blue-safe, 0.95);
+        }
+
+        &-client {
+            color: $color--white;
+        }
+    }
 }

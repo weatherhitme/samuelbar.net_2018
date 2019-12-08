@@ -16,8 +16,8 @@ footer.footer {
 	}
 
 	.footer-left {
-        justify-content: flex-start;
-        margin-right: auto;
+		justify-content: flex-start;
+		margin-right: auto;
 	}
 
 	.footer-center {
@@ -25,20 +25,25 @@ footer.footer {
 	}
 
 	.footer-right {
-        margin-left: auto;
+		margin-left: auto;
 		justify-content: flex-end;
 	}
 
 	.copyright {
 		font-size: 14px;
 		font-weight: 700;
-		color: $color--grey;
 		text-align: center;
 
 		> span {
-			color: $color--grey;
 			font-weight: 600;
 			margin-left: 1em;
 		}
+	}
+}
+
+@include dark-mode {
+	footer.footer {
+		background: $color--grey;
+		color: $color--white;
 	}
 }

@@ -99,13 +99,20 @@
 	}
 
 	.hero-desc {
-        margin-top: 1.5em;
+		margin-top: 1.5em;
 		@include media-breakpoint-up(md) {
-            margin-top: 0;
-            text-align: left;
+			margin-top: 0;
+			text-align: left;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 		}
+	}
+}
+
+@include dark-mode {
+	.hero {
+		background: $color--grey-medium;
+		// color: $color--grey;
 	}
 }

@@ -19,40 +19,40 @@ header.navbar {
 		display: flex;
 		align-items: center;
 		width: 100%;
-    }
+	}
 
-    .nav-button {
-        $button-size: 30px;
-        display: inline-block;
-        width: $button-size*1.1;
-        height: $button-size;
-        margin-left: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        transition: 0.3s ease;
+	.nav-button {
+		$button-size: 30px;
+		display: inline-block;
+		width: $button-size * 1.1;
+		height: $button-size;
+		margin-left: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		transition: 0.3s ease;
 
-        &-bar {
-            $bar-height: 5px;
-            background: color('grey');
-            height: $bar-height;
-            width: 100%;
-            display: inline-block;
-            border-radius: $bar-height;
-            transition: 0.3s ease;
-        }
+		&-bar {
+			$bar-height: 5px;
+			background: $color--grey;
+			height: $bar-height;
+			width: 100%;
+			display: inline-block;
+			border-radius: $bar-height;
+			transition: 0.3s ease;
+		}
 
-        &.expanded {
-            transform: rotate(-90deg);
-            .nav-button-bar {
-                background: color('red');
-            }
-        }
+		&.expanded {
+			transform: rotate(-90deg);
+			.nav-button-bar {
+				background: $color--red;
+			}
+		}
 
-        @include media-breakpoint-up($bp-tablet) {
-            display: none;
-        }
-    }
+		@include media-breakpoint-up($bp-tablet) {
+			display: none;
+		}
+	}
 
 	h1 {
 		font-size: $size-h6;
@@ -132,17 +132,17 @@ header.navbar {
 			}
 		}
 		@include media-breakpoint-down($bp-mobile) {
-            &::before {
-                content: '';
-                background: color('white');
-                z-index: -1;
-                display: inline-block;
-                position: absolute;
-                left: 0;
-                top: 0;
-                right: 0;
-                bottom: 0;
-            }
+			&::before {
+				content: "";
+				background: $color--white;
+				z-index: -1;
+				display: inline-block;
+				position: absolute;
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
+			}
 		}
 	}
 
@@ -152,5 +152,66 @@ header.navbar {
 			height: 80px;
 		}
 		// mix-blend-mode: multiply;
+
+		&-dark {
+			display: none;
+		}
+	}
+}
+
+@include dark-mode {
+	header.navbar {
+		background: $color--grey;
+
+		nav {
+			&::before {
+				background: $color--grey;
+			}
+			ul {
+				background: rgba($color--grey-medium, 0.95);
+				li {
+					a {
+						color: $color--white;
+
+						@include hover-focus {
+							color: $color--red-light;
+							outline-color: $color--red;
+						}
+
+						&.active {
+							color: $color--blue-light;
+							outline-color: $color--blue;
+						}
+					}
+				}
+			}
+
+			@include media-breakpoint-down($bp-mobile) {
+				background: rgba($color--grey, 0.95);
+            }
+
+            .nav-button {
+                &-bar {
+                    background: $color--white;
+                }
+
+                &.expanded {
+                    .nav-button-bar {
+                        background: $color--red-light;
+                    }
+                }
+
+                @include media-breakpoint-up($bp-tablet) {
+                    display: none;
+                }
+            }
+        }
+	}
+
+	.logo {
+		display: none;
+		&-dark {
+			display: block;
+		}
 	}
 }
