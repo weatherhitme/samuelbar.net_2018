@@ -5,8 +5,8 @@
 
 // body.user-is-tabbing {
 //     .project-overlay {
-// 		color: color("blue-light");
-// 		background: rgba(color("blue-safe"), 0.95);
+// 		color: $color--blue-light;
+// 		background: rgba($color--blue-safe, 0.95);
 //     }
 // }
 
@@ -20,7 +20,7 @@
 		overflow: hidden;
 		position: relative;
 		@include box-shadow-faint;
-		// border: 10px solid color("white");
+		// border: 10px solid $color--white;
 		transition: 0.3s ease;
 
 		@include hover-focus {
@@ -53,8 +53,8 @@
 		display: flex;
 		justify-content: center;
 		flex-direction: column;
-		color: color("blue-safe");
-		background: rgba(color("blue-light"), 0.95);
+		color: $color--blue-safe;
+		background: rgba($color--blue-light, 0.95);
 		opacity: 0;
 		box-shadow: none;
 		transition: 0.3s;
@@ -84,12 +84,12 @@
 		font-weight: 600;
 		margin-top: -0.5em;
     }
-    
+
     &-client {
         // position: absolute;
         // top: 25px;
         // left: 25px;
-        color: color(blue-safe);
+        color: $color--blue-safe;
         font-size: 14px;
         opacity: 0.5;
         display: inline-block;
@@ -104,7 +104,7 @@
 		justify-content: flex-start;
 		align-items: flex-start;
         padding: 1.5em;
-        
+
 		margin-top: $section-gap-small;
 		@include media-breakpoint-up($bp-tablet) {
 			margin-top: 0;

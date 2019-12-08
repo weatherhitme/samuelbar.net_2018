@@ -35,16 +35,30 @@
 	} // .bg-focus-middle, etc...
 }
 
-@each $color, $val in $var-colors {
+@each $color,
+	$val
+		in (
+			"blue": $color--blue,
+			"blue-light": $color--blue-light,
+			"blue--safe": $color--blue-safe,
+			"red": $color--red,
+			"red-light": $color--red-light,
+			"red-safe": $color--red-safe,
+			"grey": $color--grey,
+			"grey-light": $color--grey-light,
+			"grey-safe": $color--grey-safe,
+			"white": $color--white
+		)
+{
 	.text {
 		&-#{$color} {
-			color: color($color) !important;
+			color: $val !important;
 		}
 	}
 
 	.bg {
 		&-#{$color} {
-			background-color: color($color) !important;
+			background-color: $val !important;
 		}
 	}
 }
@@ -89,13 +103,13 @@
 	@include h6;
 }
 
-@each $margin, $val in  ("0_5": 0.5,"1":1,"2":3) {
-    .m-bottom-#{$margin}em {
-        margin-bottom: #{$val}em;
-    }
-    .m-top-#{$margin}em {
-        margin-top: #{$val}em;
-    }
+@each $margin, $val in ("0_5": 0.5, "1": 1, "2": 3) {
+	.m-bottom-#{$margin}em {
+		margin-bottom: #{$val}em;
+	}
+	.m-top-#{$margin}em {
+		margin-top: #{$val}em;
+	}
 }
 
 @each $br, $px in $grid-breakpoints {
