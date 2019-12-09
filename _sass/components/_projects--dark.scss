@@ -1,0 +1,12 @@
+@import "components/projects";
+
+.project {
+	&-overlay {
+		color: $color--blue-light;
+		background: rgba($color--blue-safe, 0.95);
+	}
+
+	&-client {
+		color: $color--white;
+	}
+}

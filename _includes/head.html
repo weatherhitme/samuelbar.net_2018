@@ -6,15 +6,32 @@
     <title>{% if page.title %}{{ page.title | escape }} | Sam Barnett, Perth UX Developer{% else %}{{ site.title |
         escape }}{% endif %}</title>
     {% if page.desc-long %}
-        {% assign desc = page.desc-long %}
+    {% assign desc = page.desc-long %}
     {% else %}
-        {% assign desc = page.desc %}
+    {% assign desc = page.desc %}
     {% endif %}
 
     <meta name="description" content="{{ desc | default: site.description
     | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+    <link rel="stylesheet" type="text/css" href="{{ '/assets/css/style.css' | relative_url }}" id="stylesheet">
+
+    <script>
+        function swapStylesheet() {
+            var stylesheet = document.getElementById("stylesheet");
+            var theme = localStorage.getItem("theme");
+            if (theme == 'dark')
+                stylesheet.setAttribute("href", "{{ '/assets/css/style-dark.css' | relative_url }}")
+             else if (theme == "light"|| theme == 'undefined' || theme == undefined)
+                stylesheet.setAttribute("href", "{{ '/assets/css/style.css' | relative_url }}")
+
+            console.log("Stylesheet swapped")
+        }
+
+        swapStylesheet();
+        document.addEventListener("stylesheetToggle", swapStylesheet);
+    </script>
 
     <link rel="canonical" href="{{site.url}}{{ page.url | replace:'index.html','' }}">
     <link rel="stylesheet" type="text/css" href="{{ '/assets/css/vendor/slick/slick.css' | relative_url }}" />

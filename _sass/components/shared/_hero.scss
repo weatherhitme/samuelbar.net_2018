@@ -109,10 +109,3 @@
 		}
 	}
 }
-
-@include dark-mode {
-	.hero {
-		background: $color--grey-medium;
-		// color: $color--grey;
-	}
-}

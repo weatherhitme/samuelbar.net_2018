@@ -41,6 +41,7 @@ $(document).ready(function () {
     $('.loading-hide').removeClass('loading-hide');
     tabbingBehaviour();
     breakpointChange();
+    darkModeToggle();
 
 
     enterClick($('a.project-inner'));
@@ -56,7 +57,7 @@ $(document).ready(function () {
         }
     });
 
-    $('.nav-button').click(function() {
+    $('.nav-button').click(function () {
         $('.nav-button, .navbar ul').toggleClass('expanded');
     })
 
@@ -109,4 +110,20 @@ function enterClick(selector) {
             this.click();
         }
     });
+}
+
+function darkModeToggle() {
+    $(".dark-mode-button").click(toggleTheme);
+}
+
+function toggleTheme() {
+    let theme = localStorage.getItem("theme");
+    console.log("Current theme: " + theme);
+    if (theme == "light" || theme == 'undefined' || theme == undefined)
+        localStorage.setItem("theme", "dark");
+    else if (theme == "dark")
+        localStorage.setItem("theme", "light");
+    console.log("New theme: " + localStorage.getItem("theme"));
+
+    document.dispatchEvent(new CustomEvent("stylesheetToggle"))
 }

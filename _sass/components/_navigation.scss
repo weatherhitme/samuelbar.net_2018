@@ -151,67 +151,9 @@ header.navbar {
 		@include media-breakpoint-up($bp-tablet) {
 			height: 80px;
 		}
-		// mix-blend-mode: multiply;
-
-		&-dark {
-			display: none;
-		}
 	}
 }
 
-@include dark-mode {
-	header.navbar {
-		background: $color--grey;
-
-		nav {
-			&::before {
-				background: $color--grey;
-			}
-			ul {
-				background: rgba($color--grey-medium, 0.95);
-				li {
-					a {
-						color: $color--white;
-
-						@include hover-focus {
-							color: $color--red-light;
-							outline-color: $color--red;
-						}
-
-						&.active {
-							color: $color--blue-light;
-							outline-color: $color--blue;
-						}
-					}
-				}
-			}
-
-			@include media-breakpoint-down($bp-mobile) {
-				background: rgba($color--grey, 0.95);
-            }
-
-            .nav-button {
-                &-bar {
-                    background: $color--white;
-                }
-
-                &.expanded {
-                    .nav-button-bar {
-                        background: $color--red-light;
-                    }
-                }
-
-                @include media-breakpoint-up($bp-tablet) {
-                    display: none;
-                }
-            }
-        }
-	}
-
-	.logo {
-		display: none;
-		&-dark {
-			display: block;
-		}
-	}
+.logo-dark {
+    display: none;
 }

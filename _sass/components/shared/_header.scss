@@ -26,10 +26,3 @@
 		}
 	}
 }
-
-@include dark-mode {
-    .header {
-        background-color: $color--grey-medium;
-        color: $color--white;
-    }
-}

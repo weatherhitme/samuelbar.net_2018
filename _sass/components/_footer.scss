@@ -40,10 +40,3 @@ footer.footer {
 		}
 	}
 }
-
-@include dark-mode {
-	footer.footer {
-		background: $color--grey;
-		color: $color--white;
-	}
-}

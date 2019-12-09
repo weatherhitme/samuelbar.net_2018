@@ -62,20 +62,6 @@
 			background-color: $val !important;
 		}
 	}
-
-    @include dark-mode {
-        .dark-text {
-            &-#{$color} {
-                color: $val !important;
-            }
-        }
-
-        .dark-bg {
-            &-#{$color} {
-                background-color: $val !important;
-            }
-        }
-    }
 }
 
 .text-uppercase {
