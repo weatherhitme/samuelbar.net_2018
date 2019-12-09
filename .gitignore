@@ -4,6 +4,5 @@ _site
 .DS_Store
 .tinypng
 .DS_Store
-assets/.DS_Store
-assets/images/content/.DS_Store
+*/.DS_Store
 .jekyll-cache

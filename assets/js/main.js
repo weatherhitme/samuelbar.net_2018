@@ -20,68 +20,48 @@ $('.hero-container').slick({
     }]
 })
 
+var mobile = desktop = false;
+
 $(document).ready(function () {
-    $('.loading-hide').removeClass('loading-hide');
-    tabbingBehaviour();
-
-    $(window).resize(function () {
-        if ($('.hero-container').length)
-            $('.hero-container')[0].slick.refresh();
-    });
-
-    // Below from https://stackoverflow.com/a/31410149
-    var mobile = desktop = false;
     var resizeTimer, width;
 
     $(window).resize(function () {
         // clear the timeout
         clearTimeout(resizeTimer);
 
-        // execute breakpointChange() once the viewport 
+        // execute breakpointChange() once the viewport
         // has stopped changing in size for 400ms
         resizeTimer = setTimeout(breakpointChange(), 400);
+
+
+        if ($('.hero-container').length)
+            $('.hero-container')[0].slick.refresh();
     });
 
-    function breakpointChange() {
-        width = window.innerWidth;
-        if (!mobile && width < 992) {
-            desktop = false;
-            mobile = true;
-            $("body").removeClass("desktop");
-            $("body").addClass("mobile");
-            console.log("mobile")
-        }
-        if (!desktop && width >= 992) {
-            mobile = false;
-            desktop = true;
-            $("body").removeClass("mobile");
-            $("body").addClass("desktop");
-            console.log("desktop")
-        }
-    }
+    $('.loading-hide').removeClass('loading-hide');
+    tabbingBehaviour();
     breakpointChange();
+    darkModeToggle();
 
 
     enterClick($('a.project-inner'));
-    $('a.project-inner').click(function (e) {
-        var $this = $(this);
-        var isTappable = $this.hasClass('tappable');
-        if (mobile && !isTappable) {
-            e.preventDefault();
-            $this.addClass('tappable');
-        }
-    })
-    $('a.project-inner').mouseout(function () {
-        var $this = $(this);
-        var isTappable = $this.hasClass('tappable');
-        if (mobile && isTappable) {
-            $this.removeClass("tappable")
-        }
-    })
 
-    $('.nav-button').click(function() {
+    $('a.project-inner').on("click mouseleave", function (e) {
+        var $this = $(this);
+        var isTappable = $this.hasClass('tappable');
+        if (mobile) {
+            if (!isTappable) {
+                e.preventDefault();
+            }
+            $this.toggleClass('tappable');
+        }
+    });
+
+    $('.nav-button').click(function () {
         $('.nav-button, .navbar ul').toggleClass('expanded');
     })
+
+    $("body").addClass("dark-mode");
 });
 
 function tabbingBehaviour() {
@@ -105,10 +85,61 @@ function tabbingBehaviour() {
     window.addEventListener('keydown', handleFirstTab);
 }
 
+// Below from https://stackoverflow.com/a/31410149
+function breakpointChange() {
+    width = window.innerWidth;
+    if (!mobile && width < 992) {
+        desktop = false;
+        mobile = true;
+        $("body").removeClass("desktop");
+        $("body").addClass("mobile");
+        console.log("mobile")
+    }
+    if (!desktop && width >= 992) {
+        mobile = false;
+        desktop = true;
+        $("body").removeClass("mobile");
+        $("body").addClass("desktop");
+        console.log("desktop")
+    }
+}
+
 function enterClick(selector) {
     selector.keypress(function (e) {
         if (e.keyCode === 13) {
             this.click();
         }
     });
+}
+
+function darkModeToggle() {
+    if (localStorage.getItem("theme") == "dark")
+        $(".dark-mode-button").toggleClass("on");
+
+    $(".dark-mode-button").click(toggleTheme);
+}
+
+function toggleTheme() {
+    let $this = $(this);
+    $(this).toggleClass("on");
+    switch ($this.attr("aria-checked")) {
+        case "false":
+            $this.attr("aria-checked", "true");
+            break;
+        case "true":
+            $this.attr("aria-checked", "false");
+            break;
+        default:
+            $this.attr("aria-checked", "true");
+    }
+
+    let theme = localStorage.getItem("theme");
+    console.log("Current theme: " + theme);
+    if (theme == "light" || theme == 'undefined' || theme == undefined)
+        localStorage.setItem("theme", "dark");
+    else if (theme == "dark")
+        localStorage.setItem("theme", "light");
+    console.log("New theme: " + localStorage.getItem("theme"));
+
+    document.dispatchEvent(new CustomEvent("stylesheetToggle"))
 }

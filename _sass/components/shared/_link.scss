@@ -2,50 +2,50 @@
 	padding: 0.15em 0.2em;
 
 	&-solid-red {
-		@include link(color("red-safe"), color("red-light"));
+		@include link($color--red-safe, $color--red-light);
 
 		@include hover {
-			@include link(color("red"), color("white"));
+			@include link($color--red, $color--white);
 		}
 	}
 
 	&-solid-blue {
-		@include link(color("blue-safe"), color("blue-light"));
+		@include link($color--blue-safe, $color--blue-light);
 
 		@include hover {
-			@include link(color("blue"), color("white"));
+			@include link($color--blue, $color--white);
 		}
 	}
 
 	&-solid-grey {
-		@include link(color("white"), color("grey"));
+		@include link($color--white, $color--grey);
 
 		@include hover {
-			@include link(color("grey"), color("grey-light"));
+			@include link($color--grey, $color--grey-light);
 		}
 	}
 
 	&-red {
-		@include link(color("red-light"), color("red-safe"));
+		@include link($color--red-light, $color--red-safe);
 
 		@include hover {
-			@include link(color("red"), color("white"));
+			@include link($color--red, $color--white);
 		}
 	}
 
 	&-blue {
-		@include link(color("blue-light"), color("blue-safe"));
+		@include link($color--blue-light, $color--blue-safe);
 
 		@include hover {
-			@include link(color("blue"), color("white"));
+			@include link($color--blue, $color--white);
 		}
 	}
 
 	&-grey {
-		@include link(color("grey-light"), color("grey"));
+		@include link($color--grey-light, $color--grey);
 
 		@include hover {
-			@include link(color("grey"), color("white"));
+			@include link($color--grey, $color--white);
 		}
 	}
 }
