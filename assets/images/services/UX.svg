@@ -1,68 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 109.9 85" style="enable-background:new 0 0 109.9 85;" xml:space="preserve">
 <style type="text/css">
-	.st0{opacity:0.15;}
+	.st0{opacity:0.15;enable-background:new    ;}
 	.st1{fill:#363639;}
-	.st2{opacity:0.25;fill:#FFFFFF;}
-	.st3{fill:#00AEEF;}
-	.st4{fill:#EF5656;}
+	.st2{opacity:0.25;fill:#FFFFFF;enable-background:new    ;}
+	.st3{fill:#4A4A4A;}
+	.st4{fill:#00AEEF;}
+	.st5{fill:#EF5656;}
 </style>
 <g id="XMLID_544_">
 	<g id="XMLID_679_">
 		<path id="XMLID_683_" class="st0" d="M65.8,60.7c0,11.7,0,21.3-1.2,24.3H32.1c3-2.4,2.2-12.6,2.2-24.3H65.8z"/>
 		<rect id="XMLID_682_" x="34.3" y="53.3" class="st1" width="31.5" height="7.4"/>
 		<rect id="XMLID_681_" x="34.3" y="53.3" class="st2" width="31.5" height="7.4"/>
-		<path id="XMLID_680_" class="st1" d="M65.8,60.7c0,10.5-1.5,19.6-4.5,21.8H29.8c3-2.2,4.5-11.3,4.5-21.8H65.8z"/>
+		<path id="XMLID_680_" class="st3" d="M65.8,60.7c0,10.5-1.5,19.6-4.5,21.8H29.8c3-2.2,4.5-11.3,4.5-21.8H65.8z"/>
 	</g>
 	<g id="XMLID_674_">
-		<path id="XMLID_678_" class="st0" d="M100.6,57c0,11.7,0,21.3-1.2,24.3H66.8c3-2.4,2.2-12.6,2.2-24.3H100.6z"/>
-		<rect id="XMLID_677_" x="69.1" y="49.6" class="st3" width="31.5" height="7.4"/>
+		<path id="XMLID_678_" class="st0" d="M100.6,57c0,11.7,0,21.3-1.2,24.3H66.8c3-2.4,2.2-12.6,2.2-24.3C69,57,100.6,57,100.6,57z"/>
+		<rect id="XMLID_677_" x="69.1" y="49.6" class="st4" width="31.5" height="7.4"/>
 		<rect id="XMLID_676_" x="69.1" y="49.6" class="st2" width="31.5" height="7.4"/>
-		<path id="XMLID_675_" class="st3" d="M100.6,57c0,10.5-1.5,19.6-4.5,21.8H64.6c3-2.2,4.5-11.3,4.5-21.8H100.6z"/>
+		<path id="XMLID_675_" class="st4" d="M100.6,57c0,10.5-1.5,19.6-4.5,21.8H64.6c3-2.2,4.5-11.3,4.5-21.8C69.1,57,100.6,57,100.6,57
+			z"/>
 	</g>
 	<g id="XMLID_669_">
 		<path id="XMLID_673_" class="st0" d="M45.6,47.7c0,11.7,0,21.3-1.2,24.3H11.8c3-2.4,2.2-12.6,2.2-24.3H45.6z"/>
-		<rect id="XMLID_672_" x="14.1" y="40.3" class="st4" width="31.5" height="7.4"/>
+		<rect id="XMLID_672_" x="14.1" y="40.3" class="st5" width="31.5" height="7.4"/>
 		<rect id="XMLID_671_" x="14.1" y="40.3" class="st2" width="31.5" height="7.4"/>
-		<path id="XMLID_670_" class="st4" d="M45.6,47.7c0,10.5-1.5,19.6-4.5,21.8H9.6c3-2.2,4.5-11.3,4.5-21.8H45.6z"/>
+		<path id="XMLID_670_" class="st5" d="M45.6,47.7c0,10.5-1.5,19.6-4.5,21.8H9.6c3-2.2,4.5-11.3,4.5-21.8H45.6z"/>
 	</g>
 	<g id="XMLID_664_">
 		<path id="XMLID_668_" class="st0" d="M109.9,42.2c0,11.7,0,21.3-1.2,24.3H76.1c3-2.4,2.2-12.6,2.2-24.3H109.9z"/>
-		<rect id="XMLID_667_" x="78.4" y="34.8" class="st4" width="31.5" height="7.4"/>
+		<rect id="XMLID_667_" x="78.4" y="34.8" class="st5" width="31.5" height="7.4"/>
 		<rect id="XMLID_666_" x="78.4" y="34.8" class="st2" width="31.5" height="7.4"/>
-		<path id="XMLID_665_" class="st4" d="M109.9,42.2c0,10.5-1.5,19.6-4.5,21.8H73.9c3-2.2,4.5-11.3,4.5-21.8H109.9z"/>
+		<path id="XMLID_665_" class="st5" d="M109.9,42.2c0,10.5-1.5,19.6-4.5,21.8H73.9c3-2.2,4.5-11.3,4.5-21.8H109.9z"/>
 	</g>
 	<g id="XMLID_659_">
 		<path id="XMLID_663_" class="st0" d="M81.1,38.7c0,11.7,0,21.3-1.2,24.3H47.3c3-2.4,2.2-12.6,2.2-24.3H81.1z"/>
-		<rect id="XMLID_662_" x="49.6" y="31.3" class="st3" width="31.5" height="7.4"/>
+		<rect id="XMLID_662_" x="49.6" y="31.3" class="st4" width="31.5" height="7.4"/>
 		<rect id="XMLID_661_" x="49.6" y="31.3" class="st2" width="31.5" height="7.4"/>
-		<path id="XMLID_660_" class="st3" d="M81.1,38.7c0,10.5-1.5,19.6-4.5,21.8H45.1c3-2.2,4.5-11.3,4.5-21.8H81.1z"/>
+		<path id="XMLID_660_" class="st4" d="M81.1,38.7c0,10.5-1.5,19.6-4.5,21.8H45.1c3-2.2,4.5-11.3,4.5-21.8H81.1z"/>
 	</g>
 	<g id="XMLID_654_">
 		<path id="XMLID_658_" class="st0" d="M36,26.3c0,11.7,0,21.3-1.2,24.3H2.2c3-2.4,2.2-12.6,2.2-24.3H36z"/>
-		<rect id="XMLID_657_" x="4.5" y="18.9" class="st3" width="31.5" height="7.4"/>
+		<rect id="XMLID_657_" x="4.5" y="18.9" class="st4" width="31.5" height="7.4"/>
 		<rect id="XMLID_656_" x="4.5" y="18.9" class="st2" width="31.5" height="7.4"/>
-		<path id="XMLID_655_" class="st3" d="M36,26.3c0,10.5-1.5,19.6-4.5,21.8H0c3-2.2,4.5-11.3,4.5-21.8H36z"/>
+		<path id="XMLID_655_" class="st4" d="M36,26.3c0,10.5-1.5,19.6-4.5,21.8H0c3-2.2,4.5-11.3,4.5-21.8H36z"/>
 	</g>
 	<g id="XMLID_649_">
 		<path id="XMLID_653_" class="st0" d="M61.9,22.8c0,11.7,0,21.3-1.2,24.3H28.1c3-2.4,2.2-12.6,2.2-24.3H61.9z"/>
 		<rect id="XMLID_652_" x="30.3" y="15.4" class="st1" width="31.5" height="7.4"/>
 		<rect id="XMLID_651_" x="30.3" y="15.4" class="st2" width="31.5" height="7.4"/>
-		<path id="XMLID_650_" class="st1" d="M61.9,22.8c0,10.5-1.5,19.6-4.5,21.8H25.9c3-2.2,4.5-11.3,4.5-21.8H61.9z"/>
+		<path id="XMLID_650_" class="st3" d="M61.9,22.8c0,10.5-1.5,19.6-4.5,21.8H25.9c3-2.2,4.5-11.3,4.5-21.8H61.9z"/>
 	</g>
 	<g id="XMLID_644_">
-		<path id="XMLID_648_" class="st0" d="M80.2,7.4c0,11.7,0,21.3-1.2,24.3H46.4c3-2.4,2.2-12.6,2.2-24.3H80.2z"/>
-		<rect id="XMLID_647_" x="48.7" y="0" class="st4" width="31.5" height="7.4"/>
-		<rect id="XMLID_646_" x="48.7" y="0" class="st2" width="31.5" height="7.4"/>
-		<path id="XMLID_645_" class="st4" d="M80.2,7.4c0,10.5-1.5,19.6-4.5,21.8H44.2c3-2.2,4.5-11.3,4.5-21.8H80.2z"/>
+		<path id="XMLID_648_" class="st0" d="M80.2,7.4c0,11.7,0,21.3-1.2,24.3H46.4c3-2.4,2.2-12.6,2.2-24.3C48.6,7.4,80.2,7.4,80.2,7.4z
+			"/>
+		<rect id="XMLID_647_" x="48.7" class="st5" width="31.5" height="7.4"/>
+		<rect id="XMLID_646_" x="48.7" class="st2" width="31.5" height="7.4"/>
+		<path id="XMLID_645_" class="st5" d="M80.2,7.4c0,10.5-1.5,19.6-4.5,21.8H44.2c3-2.2,4.5-11.3,4.5-21.8
+			C48.7,7.4,80.2,7.4,80.2,7.4z"/>
 	</g>
 	<g id="XMLID_639_">
-		<path id="XMLID_643_" class="st0" d="M109,14.2c0,11.7,0,21.3-1.2,24.3H75.3c3-2.4,2.2-12.6,2.2-24.3H109z"/>
+		<path id="XMLID_643_" class="st0" d="M109,14.2c0,11.7,0,21.3-1.2,24.3H75.3c3-2.4,2.2-12.6,2.2-24.3C77.5,14.2,109,14.2,109,14.2
+			z"/>
 		<rect id="XMLID_642_" x="77.5" y="6.8" class="st1" width="31.5" height="7.4"/>
 		<rect id="XMLID_641_" x="77.5" y="6.8" class="st2" width="31.5" height="7.4"/>
-		<path id="XMLID_640_" class="st1" d="M109,14.2c0,10.5-1.5,19.6-4.5,21.8H73c3-2.2,4.5-11.3,4.5-21.8H109z"/>
+		<path id="XMLID_640_" class="st3" d="M109,14.2c0,10.5-1.5,19.6-4.5,21.8H73c3-2.2,4.5-11.3,4.5-21.8C77.5,14.2,109,14.2,109,14.2
+			z"/>
 	</g>
 </g>
 </svg>
