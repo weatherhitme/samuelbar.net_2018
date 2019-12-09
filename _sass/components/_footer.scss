@@ -21,7 +21,8 @@ footer.footer {
 	}
 
 	.footer-center {
-		justify-content: center;
+        justify-content: center;
+        flex-direction: column;
 	}
 
 	.footer-right {

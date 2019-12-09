@@ -8,19 +8,17 @@ header.navbar {
 			background: $color--grey;
 		}
 		ul {
-			background: rgba($color--grey-medium, 0.95);
+			background: rgba($color--grey, 0.95);
 			li {
 				a {
 					color: $color--white;
 
 					@include hover-focus {
-						color: $color--red-light;
-						outline-color: $color--red;
+						color: $color--blue-light;
 					}
 
 					&.active {
-						color: $color--blue-light;
-						outline-color: $color--blue;
+						color: $color--blue;
 					}
 				}
 			}
@@ -37,7 +35,7 @@ header.navbar {
 
 			&.expanded {
 				.nav-button-bar {
-					background: $color--red-light;
+					background: $color--blue;
 				}
 			}
 

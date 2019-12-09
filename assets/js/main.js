@@ -113,10 +113,26 @@ function enterClick(selector) {
 }
 
 function darkModeToggle() {
+    if (localStorage.getItem("theme") == "dark")
+        $(".dark-mode-button").toggleClass("on");
+
     $(".dark-mode-button").click(toggleTheme);
 }
 
 function toggleTheme() {
+    let $this = $(this);
+    $(this).toggleClass("on");
+    switch ($this.attr("aria-checked")) {
+        case "false":
+            $this.attr("aria-checked", "true");
+            break;
+        case "true":
+            $this.attr("aria-checked", "false");
+            break;
+        default:
+            $this.attr("aria-checked", "true");
+    }
+
     let theme = localStorage.getItem("theme");
     console.log("Current theme: " + theme);
     if (theme == "light" || theme == 'undefined' || theme == undefined)
