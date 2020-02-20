@@ -14,7 +14,6 @@
 	margin: 15px 0;
 
 	&-inner {
-		cursor: pointer;
 		display: block;
 		@include window-style;
 		overflow: hidden;
@@ -73,18 +72,18 @@
 		@include media-breakpoint-up(xl) {
 			font-size: 16px;
 		}
-
-		p {
-			text-decoration: underline;
-			font-weight: 700;
-		}
 	}
+
+    &-link {
+        text-decoration: underline;
+        font-weight: 700;
+    }
 
 	&-desc {
 		font-weight: 600;
 		margin-top: -0.5em;
     }
-    
+
     &-client {
         // position: absolute;
         // top: 25px;
@@ -104,7 +103,7 @@
 		justify-content: flex-start;
 		align-items: flex-start;
         padding: 1.5em;
-        
+
 		margin-top: $section-gap-small;
 		@include media-breakpoint-up($bp-tablet) {
 			margin-top: 0;
