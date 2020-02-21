@@ -4,8 +4,19 @@ publish: true
 permalink: "/projects/"
 title: Projects
 order: 2
-desc: Across my full-time work, jobs I\'ve taken on in my spare time, and small projects during university, I take immense pride in the variety and quality of the work I produce. Below is a selection of the projects I\'m most proud of.
+desc: Across my full-time work, jobs I've taken on in my spare time, and small projects during university, I take immense pride in the variety and quality of the work I produce. Below is a selection of the projects I'm most proud of.
 currently-color: blue
+personal-projects:
+  - name: JS Chess
+    desc: "After searching in vain for a simple chess experience to play with friends, I decided to create my own."
+    thumb: /assets/images/content/personal/chess.png
+    view: https://damnsamn.github.io/chess/
+    source: https://github.com/damnsamn/chess
+  - name: star.io
+    desc: "A small experimental game based on the hugely popular agar.io, but with stars, gravity and orbital mechanics."
+    thumb: /assets/images/content/personal/stario.png
+    view: https://damnsamn.github.io/star.io/
+    source: https://github.com/damnsamn/star.io
 ---
 
 <div class="projects-container row">
@@ -14,18 +25,53 @@ currently-color: blue
     <div class="project col-12 col-md-6">
         <a href="{{ project.url | relative_url }}" class="project-inner">
             <div class="project-image">
-                <img src="{{ project.thumb }}" alt="Screnshot of {{project.title}}">
+                <img src="{{ project.thumb }}" alt="Screenshot of {{project.title}}">
             </div>
             <div class="project-overlay">
                 <h4>{{project.title}}</h4>
                 <span class="project-client">{{project.client}}</span>
                 <div class="project-desc">{{project.desc}}</div>
-                <p>Read more</p>
+                <span class="project-link">Read more</span>
             </div>
         </a>
+    </div>
+    {% endfor %}
+
+
+    <section class='window-container container'>
+        <div class='header window bg-{{page.header-color}}-light text-{{page.header-color}}-safe dark-bg-{{page.header-color}}-safe dark-text-{{page.header-color}}-light'>
+
+            <div class="col-11 col-sm-10 text-left">
+
+                <h2>Personal</h2>
+                <p>Outside of work, I also love challenging myself and learning through small creative projects for fun. You can see a collection of these personal projects below.</p>
+            </div>
+
+        </div>
+    </section>
+
+    {% for project in page.personal-projects %}
+
+    <div class="project col-12 col-md-6">
+        <div class="project-inner">
+            <div class="project-image">
+                <img src="{{ project.thumb }}" alt="Screenshot of {{project.name}}">
+            </div>
+            <div class="project-overlay">
+                <h4>{{project.name}}</h4>
+                <div class="project-desc m-bottom-1em">{{project.desc}}</div>
+                <div class="d-flex justify-content-between">
+                    <a href="{{project.view}}" title="Visit {{project.name}}" class="project-link">Visit Project</a>
+                    <a href="{{project.source}}" title="View {{project.name}} on GitHub" class="project-link">View on Github</a>
+                </div>
+            </div>
+        </div>
     </div>
 
     {% endfor %}
 </div>
+
+
+
 
 {% include currently.html %}

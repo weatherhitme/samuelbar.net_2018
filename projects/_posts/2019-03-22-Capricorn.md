@@ -16,10 +16,10 @@ roles: [
 ]
 ---
 
-<a class="link link-blue" href="https://www.capricornrisk.com/" title="Visit Capricorn Risk Services Website">Capricorn</a> were looking to replace their current paper-based insurance quoting processes. Paper forms were getting passed from person to person and manually input into a clunky, slow piece of software later on.
-
-Introducing a simple and easy to use web app for the quoting process allowed the remote salesmen to input quote details directly into the system, during conversation with the client. This hugely reduces duplicate input time and allows them to retrieve quote values on the same day, rather than waiting a period of days for the manual input and processing.
+<a class="link link-blue" href="https://www.capricornrisk.com/" title="Visit Capricorn Risk Services Website">Capricorn</a> were looking to replace their current paper-based insurance quoting processes. Paper forms were getting passed from person to person and manually input into a clunky and slow piece of software, hours after meeting with the prospective client.
 
 <img alt="Final mockup" src="/assets/images/content/Capricorn/Quote.png">
+
+Introducing a simple and easy to use web app for the quoting process allowed the remote salesmen to input quote details directly into the system, during conversation with the client. This hugely reduces duplicate input time and allows them to retrieve quote values on the same day, rather than waiting a period of days for the manual input and processing.
 
 The salesmen, who would travel to prospective clients' locations across the country, were heavily involved during the development and testing of the tool. What resulted was a genuine improvement to their usual workflow, allowing them to get more done, quicker and easier than ever.

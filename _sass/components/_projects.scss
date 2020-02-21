@@ -7,7 +7,6 @@
 	margin: 15px 0;
 
 	&-inner {
-		cursor: pointer;
 		display: block;
 		@include window-style;
 		overflow: hidden;
@@ -16,13 +15,23 @@
 		// border: 10px solid $color--white;
 		transition: 0.3s ease;
 
-		@include hover-focus {
+        @mixin inner {
 			box-shadow: none;
 			.project-overlay {
-				// @include box-shadow-faint-inset;
 				opacity: 1;
-			}
+            }
+            .project-link {
+                pointer-events: auto;
+            }
+        }
+
+		@include hover-focus {
+            @include inner;
 		}
+
+		&:focus-within {
+            @include inner;
+        }
 	}
 
 	&-image {
@@ -33,6 +42,11 @@
 
 		> img {
 			transition: 0.3s;
+			// position: absolute;
+			// top: 50%;
+			// left: 0;
+			// right: 0;
+			// transform: translateY(-50%);
 		}
 	}
 
@@ -66,29 +80,40 @@
 		@include media-breakpoint-up(xl) {
 			font-size: 16px;
 		}
+	}
 
-		p {
-			text-decoration: underline;
-			font-weight: 700;
+	&-link {
+        pointer-events: none;
+		text-decoration: underline;
+		font-weight: 700;
+        color: $color--blue-safe;
+
+		@include hover {
+			color: $color--blue;
 		}
 	}
 
-    &-client {
-        // position: absolute;
-        // top: 25px;
-        // left: 25px;
-        color: $color--blue-safe;
-        font-size: 14px;
-        opacity: 0.5;
+	&-desc {
+		font-weight: 600;
 		margin-top: -0.5em;
-        display: inline-block;
-        font-weight: 700;
-    }
+	}
+
+	&-client {
+		// position: absolute;
+		// top: 25px;
+		// left: 25px;
+		color: $color--blue-safe;
+		font-size: 14px;
+		opacity: 0.5;
+		margin-top: -0.5em;
+		display: inline-block;
+		font-weight: 700;
+	}
 
 	&-desc {
 		font-weight: 600;
 		margin: 1em 0;
-    }
+	}
 
 	&-roles {
 	}
@@ -96,7 +121,7 @@
 	&-role-list {
 		justify-content: flex-start;
 		align-items: flex-start;
-        padding: 1.5em;
+		padding: 1.5em;
 
 		margin-top: $section-gap-small;
 		@include media-breakpoint-up($bp-tablet) {
@@ -122,7 +147,6 @@
 	}
 
 	&-content {
-
 		p {
 			margin-top: 0;
 
