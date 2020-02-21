@@ -31,7 +31,12 @@
 		transition: 0.3s;
 
 		> img {
-			transition: 0.3s;
+            transition: 0.3s;
+            // position: absolute;
+            // top: 50%;
+            // left: 0;
+            // right: 0;
+            // transform: translateY(-50%);
 		}
 	}
 
@@ -70,6 +75,11 @@
     &-link {
         text-decoration: underline;
         font-weight: 700;
+        color: $color--blue-safe;
+
+        @include hover {
+            color: $color--blue;
+        }
     }
 
 	&-desc {

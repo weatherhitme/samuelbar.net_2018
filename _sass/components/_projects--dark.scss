@@ -6,6 +6,14 @@
 		background: rgba($color--blue-safe, 0.95);
 	}
 
+	&-link {
+        color: $color--blue-light;
+
+        @include hover {
+            color: $color--white;
+        }
+	}
+
 	&-client {
 		color: $color--white;
 	}

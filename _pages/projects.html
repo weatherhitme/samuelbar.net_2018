@@ -12,6 +12,11 @@ personal-projects:
     thumb: /assets/images/content/personal/chess.png
     view: https://damnsamn.github.io/chess/
     source: https://github.com/damnsamn/chess
+  - name: star.io
+    desc: "A small experimental game based on the hugely popular agar.io, but with stars, gravity and orbital mechanics."
+    thumb: /assets/images/content/personal/stario.png
+    view: https://damnsamn.github.io/star.io/
+    source: https://github.com/damnsamn/star.io
 ---
 
 <div class="projects-container row">
@@ -56,8 +61,8 @@ personal-projects:
                 <h4>{{project.name}}</h4>
                 <div class="project-desc m-bottom-1em">{{project.desc}}</div>
                 <div class="d-flex justify-content-between">
-                    <a href="{{project.view}}" class="link text-blue-safe project-link">View Project</a>
-                    <a href="{{project.source}}" class="link text-blue-safe project-link">View Github</a>
+                    <a href="{{project.view}}" title="Visit {{project.name}}" class="project-link">Visit Project</a>
+                    <a href="{{project.source}}" title="View {{project.name}} on GitHub" class="project-link">View on Github</a>
                 </div>
             </div>
         </div>
