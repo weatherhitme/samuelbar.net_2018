@@ -1,0 +1,41 @@
+@import "components/shared/link";
+
+.link {
+	&-red {
+		@include link($color--red-safe, $color--red-light);
+
+		@include hover {
+			@include link($color--red-light, $color--red);
+		}
+	}
+	&-blue {
+		@include link($color--blue-safe, $color--blue-light);
+
+		@include hover {
+			@include link($color--blue-light, $color--blue);
+		}
+	}
+	&-grey {
+		@include link($color--grey-medium, $color--grey-light);
+
+		@include hover {
+			@include link($color--grey-light, $color--grey);
+		}
+	}
+
+	&-solid-red {
+		@include link($color--red, $color--white);
+
+		@include hover {
+			@include link($color--red-light, $color--red-safe);
+		}
+	}
+
+	&-solid-blue {
+		@include link($color--blue, $color--white);
+
+		@include hover {
+			@include link($color--blue-light, $color--blue-safe);
+		}
+	}
+}

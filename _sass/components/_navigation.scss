@@ -3,7 +3,7 @@ header.navbar {
 	@include box-shadow-far;
 	position: fixed;
 	top: 0;
-	background: color("white");
+	background: $color--white;
 	z-index: $zindex-fixed;
 
 	@include media-breakpoint-up($bp-tablet) {
@@ -19,40 +19,40 @@ header.navbar {
 		display: flex;
 		align-items: center;
 		width: 100%;
-    }
-    
-    .nav-button {
-        $button-size: 30px;
-        display: inline-block;
-        width: $button-size*1.1;
-        height: $button-size;
-        margin-left: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        transition: 0.3s ease;
+	}
 
-        &-bar {
-            $bar-height: 5px;
-            background: color('grey');
-            height: $bar-height;
-            width: 100%;
-            display: inline-block;
-            border-radius: $bar-height;
-            transition: 0.3s ease;
-        }
+	.nav-button {
+		$button-size: 30px;
+		display: inline-block;
+		width: $button-size * 1.1;
+		height: $button-size;
+		margin-left: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		transition: 0.3s ease;
 
-        &.expanded {
-            transform: rotate(-90deg);
-            .nav-button-bar {
-                background: color('red');
-            }
-        }
+		&-bar {
+			$bar-height: 5px;
+			background: $color--grey;
+			height: $bar-height;
+			width: 100%;
+			display: inline-block;
+			border-radius: $bar-height;
+			transition: 0.3s ease;
+		}
 
-        @include media-breakpoint-up($bp-tablet) {
-            display: none;
-        }
-    }
+		&.expanded {
+			transform: rotate(-90deg);
+			.nav-button-bar {
+				background: $color--red;
+			}
+		}
+
+		@include media-breakpoint-up($bp-tablet) {
+			display: none;
+		}
+	}
 
 	h1 {
 		font-size: $size-h6;
@@ -81,16 +81,16 @@ header.navbar {
 				a {
 					text-decoration: none;
 					font-family: $font-family--heading;
-					color: color("grey");
+					color: $color--grey;
 					transition: 0.3s ease;
 
 					@include hover-focus {
-						color: color("red-safe");
+						color: $color--red-safe;
 						text-decoration: underline;
 					}
 
 					&.active {
-						color: color("blue-safe");
+						color: $color--blue-safe;
 					}
 				}
 			}
@@ -109,7 +109,7 @@ header.navbar {
 				left: 0;
 				width: 100vw;
 				margin: 0;
-				background: rgba(color("white"), 0.95);
+				background: rgba($color--white, 0.95);
 				display: flex;
 				flex-direction: column;
 				z-index: -2;
@@ -132,17 +132,17 @@ header.navbar {
 			}
 		}
 		@include media-breakpoint-down($bp-mobile) {
-            &::before {
-                content: '';
-                background: color('white');
-                z-index: -1;
-                display: inline-block;
-                position: absolute;
-                left: 0;
-                top: 0;
-                right: 0;
-                bottom: 0;
-            }
+			&::before {
+				content: "";
+				background: $color--white;
+				z-index: -1;
+				display: inline-block;
+				position: absolute;
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
+			}
 		}
 	}
 
@@ -151,6 +151,9 @@ header.navbar {
 		@include media-breakpoint-up($bp-tablet) {
 			height: 80px;
 		}
-		// mix-blend-mode: multiply;
 	}
+}
+
+.logo-dark {
+    display: none;
 }

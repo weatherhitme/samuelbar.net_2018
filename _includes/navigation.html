@@ -2,6 +2,7 @@
     <nav class="container">
         <a href="{{site.url | relative_url}}" title="Return to Homepage" class="logo-link">
             <img class="logo" alt="Logo Image" src="{{'/assets/images/logo.svg' | relative_url}}" height="80" data-no-retina>
+            <img class="logo logo-dark" alt="Logo Image" src="{{'/assets/images/logo-dark.svg' | relative_url}}" height="80" data-no-retina>
         </a>
         <h1>SAMUEL<br><span class="text-blue">BARNETT</span></h1>
 
@@ -24,6 +25,11 @@
             </li>
             {% endif %}
             {% endfor %}
+
+            <li class="d-md-none">
+                <label class="dark-mode-label sr-only" for="dark-mode-toggle">Toggle Dark Mode</label>
+                <button id="dark-mode-toggle" class="dark-mode-button" role="switch" aria-checked="false"><i class="fas fa-sun dark-mode-icon"></i><i class="fas fa-moon dark-mode-icon"></i></button>
+            </li>
         </ul>
     </nav>
 </header>

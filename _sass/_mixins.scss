@@ -129,7 +129,7 @@
 }
 
 @mixin button($bg, $color) {
-    
+
     @include box-shadow-close($bg);
     background: $bg;
     border: 3px solid $bg;
@@ -189,4 +189,10 @@
 	@if $position == left {
 		background-position: 15% center $important;
 	}
+}
+
+@mixin dark-mode {
+    body.dark-mode {
+        @content;
+    }
 }

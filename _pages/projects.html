@@ -23,10 +23,9 @@ personal-projects:
                 <img src="{{ project.thumb }}" alt="Screenshot of {{project.title}}">
             </div>
             <div class="project-overlay">
-                <span class="project-client">{{project.client}}</span>
                 <h4>{{project.title}}</h4>
+                <span class="project-client">{{project.client}}</span>
                 <div class="project-desc">{{project.desc}}</div>
-                <div class="project-roles">{% for role in project.roles %}{{role}}. {% endfor %}</div>
                 <span class="project-link">Read more</span>
             </div>
         </a>

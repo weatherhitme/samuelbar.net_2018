@@ -9,96 +9,96 @@
 	transition: 0.3s;
 
 	@include hover {
-		transform: scale(1.025) translateY(0px);
+		// transform: scale(1.025) translateY(0px);
 	}
 
 	&.solid {
 		&-blue {
-			@include box-shadow-close(color("blue"));
-			background: color("blue-safe");
-			border: 3px solid color("blue-safe");
-			color: color("blue-light");
+			@include box-shadow-close($color--blue);
+			background: $color--blue-safe;
+			border: 3px solid $color--blue-safe;
+			color: $color--blue-light;
 
 			@include hover {
-				@include box-shadow(color("blue"));
-				background: color("blue");
-				border: 3px solid color("blue");
-				color: color("white");
+				@include box-shadow($color--blue);
+				background: $color--blue;
+				border: 3px solid $color--blue;
+				color: $color--white;
 			}
 		}
 
 		&-red {
-			@include box-shadow-close(color("red"));
-			background: color("red-safe");
-			border: 3px solid color("red-safe");
-			color: color("red-light");
+			@include box-shadow-close($color--red);
+			background: $color--red-safe;
+			border: 3px solid $color--red-safe;
+			color: $color--red-light;
 
 			@include hover {
-				@include box-shadow(color("red"));
-				background: color("red");
-				border: 3px solid color("red");
-				color: color("white");
+				@include box-shadow($color--red);
+				background: $color--red;
+				border: 3px solid $color--red;
+				color: $color--white;
 			}
 		}
 
 		&-white {
 			&-blue {
-				@include box-shadow-close(color("blue"));
-				background: color("white");
-				border: 3px solid color("white");
-				color: color("blue-safe");
+				@include box-shadow-close($color--blue);
+				background: $color--white;
+				border: 3px solid $color--white;
+				color: $color--blue-safe;
 
 				@include hover {
-					@include box-shadow(color("blue-safe"));
-					background: color("blue");
-					border: 3px solid color("blue");
-					color: color("white");
+					@include box-shadow($color--blue-safe);
+					background: $color--blue;
+					border: 3px solid $color--blue;
+					color: $color--white;
 				}
 			}
 			&-red {
-				@include box-shadow-close(color("red"));
-				background: color("white");
-				border: 3px solid color("white");
-				color: color("red-safe");
+				@include box-shadow-close($color--red);
+				background: $color--white;
+				border: 3px solid $color--white;
+				color: $color--red-safe;
 
 				@include hover {
-					@include box-shadow(color("red-safe"));
-					background: color("red");
-					border: 3px solid color("red");
-					color: color("white");
+					@include box-shadow($color--red-safe);
+					background: $color--red;
+					border: 3px solid $color--red;
+					color: $color--white;
 				}
 			}
 
 			&-grey {
-				@include button(color("white"), color("grey"));
+				@include button($color--white, $color--grey);
 			}
 		}
 	}
 
 	&.border {
 		&-blue {
-			@include box-shadow-close(color("blue"));
+			@include box-shadow-close($color--blue);
 			background: transparent;
-			border: 3px solid color("blue-safe");
-			color: color("blue-safe");
+			border: 3px solid $color--blue-safe;
+			color: $color--blue-safe;
 
 			@include hover {
-				@include box-shadow(color("blue"));
-				background: color("blue-safe");
-				color: color("white");
+				@include box-shadow($color--blue);
+				background: $color--blue-safe;
+				color: $color--white;
 			}
 		}
 
 		&-red {
-			@include box-shadow-close(color("red"));
+			@include box-shadow-close($color--red);
 			background: transparent;
-			border: 3px solid color("red-safe");
-			color: color("red-safe");
+			border: 3px solid $color--red-safe;
+			color: $color--red-safe;
 
 			@include hover {
-				@include box-shadow(color("red"));
-				background: color("red-safe");
-				color: color("white");
+				@include box-shadow($color--red);
+				background: $color--red-safe;
+				color: $color--white;
 			}
 		}
 	}

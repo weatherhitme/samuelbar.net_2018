@@ -1,6 +1,6 @@
 .header {
-	background-color: color("grey");
-	color: color("white");
+	background-color: $color--grey;
+	color: $color--white;
 	min-height: 350px;
 	flex-direction: column !important;
 
