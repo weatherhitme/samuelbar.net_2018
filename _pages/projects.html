@@ -17,6 +17,14 @@ personal-projects:
     thumb: /assets/images/content/personal/stario.png
     view: https://damnsamn.github.io/star.io/
     source: https://github.com/damnsamn/star.io
+  - name: ASCII Art Generator
+    desc: "An experimental JS tool to convert images into ASCII art, which can then be saved as an image or copied as text."
+    thumb: /assets/images/content/personal/ascii.png
+    view: https://codepen.io/damnsamn/pen/MWYYEJZ
+  - name: Volume Golf
+    desc: "What if your volume slider was a 1-dimensional golf game? My contribution to the trend of comically un-usable volume controls."
+    thumb: /assets/images/content/personal/golf.png
+    view: https://codepen.io/damnsamn/pen/wvwJEwg
 ---
 
 <div class="projects-container row">
@@ -61,8 +69,12 @@ personal-projects:
                 <h4>{{project.name}}</h4>
                 <div class="project-desc m-bottom-1em">{{project.desc}}</div>
                 <div class="d-flex justify-content-between">
+                    {% if project.view %}
                     <a href="{{project.view}}" title="Visit {{project.name}}" class="project-link">Visit Project</a>
+                    {% endif %}
+                    {% if project.source %}
                     <a href="{{project.source}}" title="View {{project.name}} on GitHub" class="project-link">View on Github</a>
+                    {% endif %}
                 </div>
             </div>
         </div>
