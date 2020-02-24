@@ -22,16 +22,16 @@ currently-color: blue
             <div class="card service-card id-{{i}}">
                 <div class="card-img">
                     <img height="100" alt=""
-                    {% if i == 1 %}src="assets/images/services/ID.svg"{% endif %}
-                    {% if i == 2 %}src="assets/images/services/UX.svg"{% endif %}
-                    {% if i == 3 %}src="assets/images/services/WD.svg"{% endif %}
+                    {% if i == 1 %}src="assets/images/services/UX.svg"{% endif %}
+                    {% if i == 2 %}src="assets/images/services/WD.svg"{% endif %}
+                    {% if i == 3 %}src="assets/images/services/ID.svg"{% endif %}
                     {% if i == 4 %}src="assets/images/services/GD.svg"{% endif %} data-no-retina>
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">
-                            {% if i == 1 %}Brand Identity{% endif %}
-                            {% if i == 2 %}User Experience{% endif %}
-                            {% if i == 3 %}Web Development{% endif %}
+                            {% if i == 1 %}User Experience{% endif %}
+                            {% if i == 2 %}Web Development{% endif %}
+                            {% if i == 3 %}Brand Identity{% endif %}
                             {% if i == 4 %}Graphic Design{% endif %}
                     </h5>
                 </div>
@@ -40,8 +40,9 @@ currently-color: blue
 
         {% endfor %}
     </div>
-    <p>I really enjoy dipping my toes into whichever technologies are necessary to reach a satisfying solution. Across various hobby projects and creative pursuits, I've also worked with 3D Modelling, Video Editing, Pixel Art, and Photography amongst many others.</p>
-    <p>For some examples of my professional work, visit the <a class="link link-blue" href="{{ '/projects' | relative_url }}"" >Projects</a> section.</p>
+    <p>I'm a UX Designer and Front-end Web Developer based in Perth, WA. I design and develop websites as my day-job, but these are also my hobbies, and I really enjoy dipping my toes into whichever technologies are necessary to reach a satisfying solution.</p>
+    <p>Across various hobby projects and creative pursuits, I've also worked with 3D Modelling, Video Editing, Photography, Pixel Art, Animation, and Game Development amongst many others.</p>
+    <p>For some examples of my work, visit the <a class="link link-blue" href="{{ '/projects' | relative_url }}"" >Projects</a> section.</p>
 
 </section>
 
