@@ -48,6 +48,16 @@
 			@include link($color--grey, $color--white);
 		}
 	}
+
+	&-external {
+		&::after {
+			@include fa("f35d");
+			font-size: 0.5em;
+			display: inline-block;
+			margin-left: 0.25em;
+			margin-bottom: 0.5em;
+		}
+	}
 }
 
 h1,

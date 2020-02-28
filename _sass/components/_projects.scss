@@ -1,6 +1,11 @@
 .projects-container {
 	margin-top: -15px;
 	margin-bottom: -15px;
+
+	> .window-container {
+		padding-top: 30px;
+		padding-bottom: 15px;
+	}
 }
 
 .project {
@@ -15,23 +20,23 @@
 		// border: 10px solid $color--white;
 		transition: 0.3s ease;
 
-        @mixin inner {
+		@mixin inner {
 			box-shadow: none;
 			.project-overlay {
 				opacity: 1;
-            }
-            .project-link {
-                pointer-events: auto;
-            }
-        }
+			}
+			.project-link {
+				pointer-events: auto;
+			}
+		}
 
 		@include hover-focus {
-            @include inner;
+			@include inner;
 		}
 
 		&:focus-within {
-            @include inner;
-        }
+			@include inner;
+		}
 	}
 
 	&-image {
@@ -83,10 +88,10 @@
 	}
 
 	&-link {
-        pointer-events: none;
+		pointer-events: none;
 		text-decoration: underline;
 		font-weight: 700;
-        color: $color--blue-safe;
+		color: $color--blue-safe;
 
 		@include hover {
 			color: $color--blue;
@@ -119,6 +124,9 @@
 	}
 
 	&-role-list {
+        position: sticky;
+        top: 50px;
+
 		justify-content: flex-start;
 		align-items: flex-start;
 		padding: 1.5em;
@@ -159,13 +167,18 @@
 				}
 				margin-top: -15px;
 			}
-			&:not(.row) {
-				@include make-col-ready();
-				@include make-col(12);
-			}
+		}
+		> .row > *:not(.row) {
+			@include make-col-ready();
+			@include make-col(12);
 		}
 		img {
-			border-radius: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.15);
+		}
+
+		@include headings {
+			margin-top: 0;
 		}
 	}
 }

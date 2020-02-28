@@ -57,6 +57,10 @@
 		}
     }
 
+    .dark-mode .text-darkmode-#{$color} {
+        color: $val !important;
+    }
+
 	.bg {
 		&-#{$color} {
 			background-color: $val !important;

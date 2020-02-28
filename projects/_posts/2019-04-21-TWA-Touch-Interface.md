@@ -1,6 +1,6 @@
 ---
 layout: project
-permalink: "projects/twa-touch-interface"
+permalink: "/projects/twa-touch-interface"
 title: Tourism WA Touch Interface
 client: Tourism WA
 header-color: blue
@@ -17,7 +17,7 @@ roles: [
 ---
 <img alt="Final mockup" src="/assets/images/content/TWA/Mockup.jpg">
 
-The <a class="link link-blue" href="https://www.wavisitorcentre.com.au/" title="Visit Western Australian Visitor Centre Website">Western Australian Visitor Centre</a> were looking to create an engaging and collaborative experience for tourists visiting the centre to find local attractions and destinations. Currently, the staff were having to recommend and direct visitors to specific attractions in one-to-one interactions. They would also write out physical itineraries for visitors by request - a labour and time intensive process.
+The <a class="link link-blue link-external" href="https://www.wavisitorcentre.com.au/" title="Visit Western Australian Visitor Centre Website">Western Australian Visitor Centre</a> were looking to create an engaging and collaborative experience for tourists visiting the centre to find local attractions and destinations. Currently, the staff were having to recommend and direct visitors to specific attractions in one-to-one interactions. They would also write out physical itineraries for visitors by request - a labour and time intensive process.
 
 They came to us having ordered an enormous wall-scale touchscreen - two-and-a-half metres wide - with a single requirement: a single page that links to existing Tourism WA assets. A simple goal, but working with such an unfamiliar scale, I got excited. I wanted to create something a little more useful and interactive.
 

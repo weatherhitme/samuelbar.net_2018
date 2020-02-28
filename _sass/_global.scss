@@ -20,7 +20,7 @@ html {
 
 html,
 body {
-	overflow-x: hidden;
+	// overflow-x: hidden;
 }
 
 body {
@@ -29,10 +29,10 @@ body {
 	line-height: 1.45;
     color: $color--grey;
 
-    margin-top: $height-nav-mobile;
+    padding-top: $height-nav-mobile;
 
     @include media-breakpoint-up($bp-tablet) {
-        margin-top: 0;
+        padding-top: 0;
     }
 
 	&.user-is-tabbing *:focus {

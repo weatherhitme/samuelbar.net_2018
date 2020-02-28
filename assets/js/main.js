@@ -59,9 +59,7 @@ $(document).ready(function () {
 
     $('.nav-button').click(function () {
         $('.nav-button, .navbar ul').toggleClass('expanded');
-    })
-
-    $("body").addClass("dark-mode");
+    });
 });
 
 function tabbingBehaviour() {
@@ -113,8 +111,11 @@ function enterClick(selector) {
 }
 
 function darkModeToggle() {
-    if (localStorage.getItem("theme") == "dark")
+    if (localStorage.getItem("theme") == "dark") {
         $(".dark-mode-button").toggleClass("on");
+        $("body").addClass("dark-mode");
+    } else
+        $("body").removeClass("dark-mode");
 
     $(".dark-mode-button").click(toggleTheme);
 }
@@ -122,6 +123,8 @@ function darkModeToggle() {
 function toggleTheme() {
     let $this = $(this);
     $(this).toggleClass("on");
+    $("body").toggleClass("dark-mode");
+
     switch ($this.attr("aria-checked")) {
         case "false":
             $this.attr("aria-checked", "true");
